@@ -51,27 +51,25 @@ jupyter lab demo_code.ipynb
 ```
 
 **What the demo does**:
-1. Loads example fMRI-derived time series.
+1. Generates random fMRI time series and random structural connectivity matrices for two clinical groups. Also, loads randomly generated clinical scores for each group. 
 2. Computes pairwise distances and performs K-Medoids clustering.
-3. Calculates silhouette scores for each cluster.
-4. Visualizes:
+3. Calculates explained variance, variance gain, mean silhouette scores, dwell times and fractional occupancies for each cluster.
+4. Performs statistical significance tests for the obtained quantities between clinical groups.
+5. Visualizes:
    - Violin plots comparing quantitative metrics between clinical groups
    - Regression lines between quantitative metrics and clinical scores of depression severity
    - Cluster medoid maps in anatomical brain space
-5. Outputs quantitative metrics such as:
-   - Dwell times, fractional occupancy, transition probabilities
+   - Mapping of each cluster onto a canonically defined resting state brain network as a radar plot
+   - Heatmaps of transition probabilities between pairs of states.
+6. Outputs quantitative metrics such as:
+   - Dwell times, fractional occupancy, transition probabilities, persistence probabilities
    - Mean silhouette score, between and within cluster variance
    - Control energy required for state transitions
 
 **Expected runtime**:
 - ~1–2 minutes on a normal desktop CPU
 
-**Expected output example**:
-```
-Optimal number of clusters (K): 5
-Mean silhouette score: 0.412
-Cluster sizes: [24, 21, 19, 18, 18]
-```
+
 Figures will be displayed inline in the notebook.
 
 ---
