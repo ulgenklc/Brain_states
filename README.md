@@ -47,7 +47,7 @@ This repository contains the source code, a small example dataset, and a Jupyter
 
 **Run the demo notebook**:
 ```bash
-jupyter lab demo_code.ipynb
+jupyter lab tutorial.ipynb
 ```
 
 **What the demo does**:
