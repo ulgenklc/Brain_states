@@ -25,7 +25,7 @@ This repository contains the source code, a small example dataset, and a Jupyter
 1. **Clone this repository**:
    ```bash
    git clone https://github.com/ulgenklc/Brain_states.git
-   cd demo_code
+   cd Brain_states
    ```
 
 2. **Create a conda environment**:
