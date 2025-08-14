@@ -31,12 +31,12 @@ This repository contains the source code, a small example dataset, and a Jupyter
 2. **Create a conda environment**:
    ```bash
    conda env create -f environment.yml
-   conda activate demo_code_env
+   conda activate test_code2
    ```
 
 3. *(Optional)* Add environment to Jupyter:
    ```bash
-   python -m ipykernel install --user --name demo_code_env --display-name "Demo Code Env"
+   python -m ipykernel install --user --name test_code2 --display-name BrainStates
    ```
 
 **Typical install time**: 2–4 minutes on a standard desktop.
