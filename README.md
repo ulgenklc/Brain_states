@@ -78,6 +78,11 @@ Figures will be displayed inline in the notebook.
 To run the analysis on your own data:
 
 ---
+### 0. Set your path
+```python
+working_path = '/Path/to/Brain_states/'
+
+---
 
 ### 1. Prepare your fMRI time-series data
 
@@ -88,8 +93,14 @@ Your data should be stored in a **Python dictionary** format, where:
   - **Rows** = brain regions
   - **Columns** = time points
 
-2. Replace `example_data.csv` path in the notebook with your own dataset.
-3. Adjust parameters (e.g., `K` for clustering) as needed.
+### 2. Extracting Data Dimensions and Subject Count
+
+```python
+size, duration = dictFMRI[idx].shape
+n_subjects = len(dictFMRI)    # Total number of subjects
+
+
+
 4. Run all cells in `demo_code.ipynb`.
 
 Outputs:
