@@ -12,7 +12,6 @@ This repository contains the source code, a small example dataset, and a Jupyter
 
 **Operating systems tested**:
 - macOS 14.x (Sonoma)  
-- Ubuntu 22.04 LTS
 
 **Hardware**:
 - Standard desktop/laptop, ≥8 GB RAM  
