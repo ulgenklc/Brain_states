@@ -33,7 +33,7 @@ This repository contains the source code, a small example dataset, and a Jupyter
    conda activate test_code2
    ```
 
-3. *(Optional)* Add environment to Jupyter:
+3. *(Optional)* Add environment to Jupyter Notebook kernels:
    ```bash
    python -m ipykernel install --user --name test_code2 --display-name BrainStates
    ```
