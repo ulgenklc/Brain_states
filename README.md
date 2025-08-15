@@ -54,7 +54,7 @@ jupyter lab tutorial.ipynb
 1. Generates random fMRI time series and random structural connectivity matrices for two clinical groups. Also, loads randomly generated clinical scores for each group. 
 2. Computes pairwise distances and performs K-Medoids clustering.
 3. Calculates explained variance, variance gain, mean silhouette scores, dwell times and fractional occupancies for each cluster.
-4. Performs statistical significance tests for the obtained quantities between clinical groups.
+4. Performs statistical significance tests, FDR correction and fits regression lines for the obtained quantities between clinical groups.
 5. Visualizes:
    - Violin plots comparing quantitative metrics between clinical groups
    - Regression lines between quantitative metrics and clinical scores of depression severity
