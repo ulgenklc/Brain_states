@@ -98,4 +98,6 @@ size, duration = dictFMRI[idx].shape
 n_subjects = len(dictFMRI)    # Total number of subjects
 ```
 
+## License
+ This project is covered under the GNU GENERAL PUBLIC LICENSE Version 3.
 
