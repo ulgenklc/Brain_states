@@ -76,7 +76,18 @@ Figures will be displayed inline in the notebook.
 ## 4. Instructions for Use
 
 To run the analysis on your own data:
-1. Prepare time-series data in `.csv` format with each row representing a time point and each column a brain region.
+
+---
+
+### 1. Prepare your fMRI time-series data
+
+Your data should be stored in a **Python dictionary** format, where:
+
+- **Keys** = subject IDs (strings, e.g., `"500"`, `"600"`)
+- **Values** = 2D NumPy arrays with:
+  - **Rows** = brain regions
+  - **Columns** = time points
+
 2. Replace `example_data.csv` path in the notebook with your own dataset.
 3. Adjust parameters (e.g., `K` for clustering) as needed.
 4. Run all cells in `demo_code.ipynb`.
