@@ -82,7 +82,6 @@ To run the analysis on your own data:
 ```python
 working_path = '/Path/to/Brain_states/'
 ```
----
 
 ### 1. Prepare your fMRI time-series data
 
@@ -101,7 +100,7 @@ n_subjects = len(dictFMRI)    # Total number of subjects
 ```
 
 
-4. Run all cells in `demo_code.ipynb`.
+### 3. Run all cells
 
 Outputs:
 - Cluster assignments
