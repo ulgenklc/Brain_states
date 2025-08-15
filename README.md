@@ -97,6 +97,29 @@ Your data should be stored in a **Python dictionary** format, although this is f
 size, duration = dictFMRI[idx].shape
 n_subjects = len(dictFMRI)    # Total number of subjects
 ```
+### 3. Anatomical images and a parcellation
+The analysis in the paper is conducted with an ultra-high field 7T MRI scanner. All the acquired images (anatomical T1w, multi-echo fMRI etc..) are stored in a [BIDS directory](https://bids.neuroimaging.io/index.html). The **BIDS_dir** folder in the repo resonates this directory in which [a template T1w anatomical image](https://surfer.nmr.mgh.harvard.edu/fswiki/CorticalParcellation_Yeo2011) is segmented and parcellated using [ConnectomeMapper3](https://connectome-mapper-3.readthedocs.io/en/latest/). All the output parcellations in native space can be found in **derivatives** folder in the **BIDS_dir** folder.
+
+If you want to run this analysis with your own data you have two options based on the output of your preprocessing:
+
+#### 1. If your brains and whole-brain parcellations are in a standard MNI space
+You can [download](https://surfer.nmr.mgh.harvard.edu/fswiki/CorticalParcellation_Yeo2011) publicly available Yeo7 parcellations and T1w template and point these paths to the correct files:
+``` python
+brain = nib.load(path/to/T1w anatomical image)
+aparcaseg = nib.load(path/to/Whole-brain parcellation)
+yeo7 = nib.load(path/to/Yeo_JNeurophysiol11_MNI152/Yeo2011_7Networks_MNI152_FreeSurferConformed1mm.nii.gz)
+```
+#### 2. If your brains and whole-brain parcellations are in a native space
+Then you will have to point these paths to the folder with the native space files.
+``` python
+brain = nib.load(working_path + 'brain_templates/sub-001_ses-1_brain.nii.gz') #T1w anatomical image
+aparcaseg = nib.load(working_path + 'brain_templates/sub-001_ses-1_atlas-L2018_res-scale1_dseg.nii.gz') # Whole-brain parcellation
+```
+
+Additionally, you will have to bring (register) the Yeo7 atlas into your native space using (ANTS)[https://github.com/ANTsX/ANTs] or a similar tool and then map **yeo7** variable to the correct nifti file.
+``` python
+yeo7 = nib.load(working_path + 'brain_templates/Yeo7_Network_sub-001.nii.gz')
+```
 
 ## License
  This project is covered under the GNU GENERAL PUBLIC LICENSE Version 3.
