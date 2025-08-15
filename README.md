@@ -84,7 +84,7 @@ working_path = '/Path/to/Brain_states/'
 
 ### 1. Prepare your fMRI time-series data
 
-Your data should be stored in a **Python dictionary** format, where:
+Your data should be stored in a **Python dictionary** format, although this is flexible and easily adjustable to **.csv** or something else, where:
 
 - **Keys** = subject IDs (strings, e.g., `"500"`, `"600"`)
 - **Values** = 2D NumPy arrays with:
