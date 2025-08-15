@@ -98,7 +98,7 @@ size, duration = dictFMRI[idx].shape
 n_subjects = len(dictFMRI)    # Total number of subjects
 ```
 ### 3. Anatomical images and a parcellation
-The analysis in the paper is conducted with an ultra-high field 7T MRI scanner. All the acquired images (anatomical T1w, multi-echo fMRI etc..) are stored in a [BIDS directory](https://bids.neuroimaging.io/index.html). The **BIDS_dir** folder in the repo resonates this directory in which [a template T1w anatomical image](https://surfer.nmr.mgh.harvard.edu/fswiki/CorticalParcellation_Yeo2011) is segmented and parcellated using [ConnectomeMapper3](https://connectome-mapper-3.readthedocs.io/en/latest/). All the output parcellations in native space can be found in **derivatives** folder in the **BIDS_dir** folder.
+The analysis in the paper is conducted with an ultra-high field 7T MRI scanner. All the acquired images (anatomical T1w, multi-echo fMRI etc..) are stored in a [BIDS directory](https://bids.neuroimaging.io/index.html). The **BIDS_dir** folder in the repo resonates this directory in which [a template T1w anatomical image](https://surfer.nmr.mgh.harvard.edu/fswiki/CorticalParcellation_Yeo2011) is segmented and parcellated as an example using [ConnectomeMapper3](https://connectome-mapper-3.readthedocs.io/en/latest/). All the output parcellations in native space can be found in **derivatives** folder in the **BIDS_dir** folder.
 
 If you want to run this analysis with your own data you have two options based on the output of your preprocessing:
 
