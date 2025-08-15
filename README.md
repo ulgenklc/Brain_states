@@ -99,11 +99,3 @@ n_subjects = len(dictFMRI)    # Total number of subjects
 ```
 
 
-### 3. Run all cells
-
-Outputs:
-- Cluster assignments
-- Dwell times and fractional occupancies and persistence probabilities per state and transition probabilities and transition energies between each pair of states
-- Brain maps (if atlas paths are provided)
-
-
