@@ -81,7 +81,7 @@ To run the analysis on your own data:
 ### 0. Set your path
 ```python
 working_path = '/Path/to/Brain_states/'
-
+```
 ---
 
 ### 1. Prepare your fMRI time-series data
@@ -98,7 +98,7 @@ Your data should be stored in a **Python dictionary** format, where:
 ```python
 size, duration = dictFMRI[idx].shape
 n_subjects = len(dictFMRI)    # Total number of subjects
-
+```
 
 
 4. Run all cells in `demo_code.ipynb`.
