@@ -1,0 +1,23 @@
+{
+    "template_name": "FSL_MNI152_FreeSurferConformed_1mm",
+    "description": "FSL MNI152 1mm template interpolated and intensity normalized into a 256 x 256 x 256 1mm-isotropic volume, obtained by putting the FSL MNI152 1mm template through recon-all using FreeSurfer 4.5.0",
+    "file_name": "FSL_MNI152_FreeSurferConformed_1mm.nii.gz",
+    "dimensions": [
+        256,
+        256,
+        256
+    ],
+    "voxel_size_mm": [
+        1.0,
+        1.0,
+        1.0
+    ],
+    "modality": "MRI T1-weighted",
+    "space": "MNI152",
+    "preprocessing": [
+        "Interpolated to 1mm isotropic",
+        "Intensity normalized",
+        "Processed through FreeSurfer recon-all 4.5.0"
+    ],
+    "network_template": "Yeo7"
+}
