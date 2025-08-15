@@ -77,7 +77,6 @@ Figures will be displayed inline in the notebook.
 
 To run the analysis on your own data:
 
----
 ### 0. Set your path
 ```python
 working_path = '/Path/to/Brain_states/'
