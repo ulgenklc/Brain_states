@@ -1,0 +1,1031 @@
+[94m
+Connectome Mapper v3.1.0[0m
+[93mCopyright (C) 2009-2022, Ecole Polytechnique Federale de Lausanne (EPFL) the University Hospital Center and University of Lausanne (UNIL-CHUV), Switzerland, and Contributors, All rights reserved.
+[0m
+INFO : Detected session(s)
+Created directory /output_dir/cmp-v3.1.0/sub-001/ses-1/anat
+[94m  .. LOAD: Load anatomical config file : /output_dir/cmp-v3.1.0/sub-001/ses-1/sub-001_ses-1_anatomical_config.json[0m
+[92m  .. INFO: Generated with the same CMP3 version[0m
+**** Check Inputs  ****
+> Looking in /bids_dir for....
+/bids_dir/sub-001/ses-1/anat/sub-001_ses-1_T1w.nii.gz
+... t1_file : /bids_dir/sub-001/ses-1/anat/sub-001_ses-1_T1w.nii.gz
+/bids_dir/sub-001/ses-1/anat/sub-001_ses-1_T1w.json
+... t1_json_file : /bids_dir/sub-001/ses-1/anat/sub-001_ses-1_T1w.json
+Inputs check finished successfully. 
+Only anatomical data (T1) available.
+--- Set Freesurfer and ANTs to use 1 threads by the means of OpenMP
+>> Process anatomical pipeline
+250815-07:49:07,294 nipype.interface INFO:
+	 **** Processing ****
+INFO : orig_dir = /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/orig
+INFO : orig_dir exists? False
+INFO : Create folder: /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/orig
+250815-07:49:08,996 nipype.workflow INFO:
+	 Generated workflow graph: /output_dir/nipype-1.8.0/sub-001/ses-1/anatomical_pipeline/graph.svg (graph2use=colored, simple_form=True).
+250815-07:49:09,22 nipype.workflow INFO:
+	 Workflow anatomical_pipeline settings: ['check', 'execution', 'logging', 'monitoring']
+250815-07:49:09,43 nipype.workflow INFO:
+	 Running in parallel.
+250815-07:49:09,56 nipype.workflow INFO:
+	 [MultiProc] Running 0 tasks, and 1 jobs ready. Free memory (GB): 1360.44/1360.44, Free processors: 1/1.
+250815-07:49:09,162 nipype.workflow INFO:
+	 [Node] Setting-up "anatomical_pipeline.anat_datasource" in "/output_dir/nipype-1.8.0/sub-001/ses-1/anatomical_pipeline/anat_datasource".
+250815-07:49:09,166 nipype.workflow INFO:
+	 [Node] Executing "anat_datasource" <nipype.interfaces.io.DataGrabber>
+250815-07:49:09,168 nipype.workflow INFO:
+	 [Node] Finished "anat_datasource", elapsed time 0.000328s.
+250815-07:49:11,58 nipype.workflow INFO:
+	 [Job 0] Completed (anatomical_pipeline.anat_datasource).
+250815-07:49:11,59 nipype.workflow INFO:
+	 [MultiProc] Running 0 tasks, and 1 jobs ready. Free memory (GB): 1360.44/1360.44, Free processors: 1/1.
+250815-07:49:11,226 nipype.workflow INFO:
+	 [Node] Setting-up "anatomical_pipeline.segmentation_stage.mgzConvert" in "/output_dir/nipype-1.8.0/sub-001/ses-1/anatomical_pipeline/segmentation_stage/mgzConvert".
+250815-07:49:11,230 nipype.workflow INFO:
+	 [Node] Executing "mgzConvert" <nipype.interfaces.freesurfer.preprocess.MRIConvert>
+250815-07:49:12,263 nipype.workflow INFO:
+	 [Node] Finished "mgzConvert", elapsed time 1.030959s.
+250815-07:49:13,58 nipype.workflow INFO:
+	 [Job 1] Completed (anatomical_pipeline.segmentation_stage.mgzConvert).
+250815-07:49:13,59 nipype.workflow INFO:
+	 [MultiProc] Running 0 tasks, and 1 jobs ready. Free memory (GB): 1360.44/1360.44, Free processors: 1/1.
+250815-07:49:13,181 nipype.workflow INFO:
+	 [Node] Setting-up "anatomical_pipeline.segmentation_stage.copyOrig" in "/output_dir/nipype-1.8.0/sub-001/ses-1/anatomical_pipeline/segmentation_stage/copyOrig".
+250815-07:49:13,184 nipype.workflow INFO:
+	 [Node] Executing "copyOrig" <cmtklib.interfaces.misc.Rename001>
+250815-07:49:13,185 nipype.workflow INFO:
+	 [Node] Finished "copyOrig", elapsed time 0.000325s.
+250815-07:49:15,59 nipype.workflow INFO:
+	 [Job 2] Completed (anatomical_pipeline.segmentation_stage.copyOrig).
+250815-07:49:15,61 nipype.workflow INFO:
+	 [MultiProc] Running 0 tasks, and 1 jobs ready. Free memory (GB): 1360.44/1360.44, Free processors: 1/1.
+250815-07:49:15,194 nipype.workflow INFO:
+	 [Node] Setting-up "anatomical_pipeline.segmentation_stage.reconall" in "/output_dir/nipype-1.8.0/sub-001/ses-1/anatomical_pipeline/segmentation_stage/reconall".
+250815-07:49:15,198 nipype.workflow INFO:
+	 [Node] Executing "reconall" <nipype.interfaces.freesurfer.preprocess.ReconAll>
+250815-07:49:15,201 nipype.interface INFO:
+	 resume recon-all : recon-all -all -qcache -no-isrunning -parallel -openmp 1 -subjid /output_dir/freesurfer-7.1.1/sub-001_ses-1 -sd /output_dir/freesurfer-7.1.1 
+250815-07:49:15,202 nipype.interface INFO:
+	 resume recon-all : recon-all -all -qcache -no-isrunning -parallel -openmp 1 -subjid /output_dir/freesurfer-7.1.1/sub-001_ses-1 -sd /output_dir/freesurfer-7.1.1 
+250815-07:49:17,60 nipype.workflow INFO:
+	 [MultiProc] Running 1 tasks, and 0 jobs ready. Free memory (GB): 1360.24/1360.44, Free processors: 0/1.
+                     Currently running:
+                       * anatomical_pipeline.segmentation_stage.reconall
+250815-14:17:54,447 nipype.workflow INFO:
+	 [Node] Finished "reconall", elapsed time 23319.246839s.
+250815-14:17:56,360 nipype.workflow INFO:
+	 [Job 3] Completed (anatomical_pipeline.segmentation_stage.reconall).
+250815-14:17:56,362 nipype.workflow INFO:
+	 [MultiProc] Running 0 tasks, and 1 jobs ready. Free memory (GB): 1360.44/1360.44, Free processors: 1/1.
+250815-14:17:56,550 nipype.workflow INFO:
+	 [Node] Setting-up "anatomical_pipeline.parcellation_stage.Lausanne2018_parcellation" in "/output_dir/nipype-1.8.0/sub-001/ses-1/anatomical_pipeline/parcellation_stage/Lausanne2018_parcellation".
+250815-14:17:56,567 nipype.workflow INFO:
+	 [Node] Executing "Lausanne2018_parcellation" <cmtklib.parcellation.Parcellate>
+250815-14:17:56,567 nipype.interface INFO:
+	 ROI_HR_th.nii.gz / fsmask_1mm.nii.gz CREATION
+250815-14:17:56,567 nipype.interface INFO:
+	 =============================================
+mri_convert -i /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/T1.mgz -o /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/T1.nii.gz 
+reading from /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/T1.mgz...
+TR=1000.00, TE=0.00, TI=0.00, flip angle=0.00
+i_ras = (-1, 0, 0)
+j_ras = (0, 0, -1)
+k_ras = (0, 1, 0)
+writing to /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/T1.nii.gz...
+mri_convert -i /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/brain.mgz -o /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/brain.nii.gz 
+reading from /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/brain.mgz...
+TR=1000.00, TE=0.00, TI=0.00, flip angle=0.00
+i_ras = (-1, 0, 0)
+j_ras = (0, 0, -1)
+k_ras = (0, 1, 0)
+writing to /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/brain.nii.gz...
+mri_convert -i /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/aseg.mgz -o /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/aseg.nii.gz 
+250815-14:17:58,361 nipype.workflow INFO:
+	 [MultiProc] Running 1 tasks, and 0 jobs ready. Free memory (GB): 1360.24/1360.44, Free processors: 0/1.
+                     Currently running:
+                       * anatomical_pipeline.parcellation_stage.Lausanne2018_parcellation
+reading from /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/aseg.mgz...
+TR=1000.00, TE=0.00, TI=0.00, flip angle=0.00
+i_ras = (-1, 0, 0)
+j_ras = (0, 0, -1)
+k_ras = (0, 1, 0)
+writing to /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/aseg.nii.gz...
+Parcellation scheme : Lausanne2018
+Create aparc+aseg.nii.gz in native space as /output_dir/freesurfer-7.1.1/sub-001_ses-1/tmp/aparc+aseg.native.nii.gz
+250815-14:18:01,491 nipype.interface INFO:
+	 b'movvol /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/aparc+aseg.mgz\ntargvol /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/rawavg.mgz\noutvol /output_dir/freesurfer-7.1.1/sub-001_ses-1/tmp/aparc+aseg.native.nii.gz\ninvert 0\ntal    0\ntalres 2\nregheader 1\nnoresample 0\ninterp  nearest (0)\nprecision  float (3)\nGdiag_no  -1\nSynth      0\nSynthSeed  1755355011\n\nComputing registration based on scanner-to-scanner\n\nFinal tkRAS-to-tkRAS Matrix is:\n 1.00000   0.00000   0.00000   0.00000;\n 0.00000   1.00000   0.00000   0.00000;\n 0.00000   0.00000   1.00000   0.00000;\n 0.00000   0.00000   0.00000   1.00000;\n\n\nVox2Vox Matrix is:\n 1.00000   0.00000   0.00000   0.00000;\n 0.00000   1.00000   0.00000   0.00000;\n 0.00000   0.00000   1.00000   0.00000;\n 0.00000   0.00000   0.00000   1.00000;\n\nResampling\nOutput registration matrix is identity\n\nmri_vol2vol done'
+mri_convert -i /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/ribbon.mgz -o /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/ribbon.nii.gz 
+reading from /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/ribbon.mgz...
+TR=1000.00, TE=0.00, TI=0.00, flip angle=0.00
+i_ras = (-1, 0, 0)
+j_ras = (0, 0, -1)
+k_ras = (0, 1, 0)
+writing to /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/ribbon.nii.gz...
+[DONE]
+- FreeSurfer subjects directory ($SUBJECTS_DIR):
+  /output_dir/freesurfer-7.1.1
+
+-  FreeSurfer subjects directory ($SUBJECTS_DIR) DOES contain 'fsaverage'
+
+- Freesurfer subject id:
+  sub-001_ses-1
+
+- Freesurfer subject directory:
+  /output_dir/freesurfer-7.1.1/sub-001_ses-1
+
+Generate MULTISCALE PARCELLATION for input subject
+ ... working on multiscale parcellation, SCALE 5
+     > resample fsaverage CorticalSurface to individual CorticalSurface
+     > generate Nifti volume from annotation
+     > relabel cortical and subcortical regions for consistency between resolutions
+     ... storing ROIs volume maximal resolution
+     ... save output volumes
+     > dilating cortical regions
+     ... save output volumes 
+ ... working on multiscale parcellation, SCALE 4
+     > resample fsaverage CorticalSurface to individual CorticalSurface
+     > generate Nifti volume from annotation
+     > relabel cortical and subcortical regions for consistency between resolutions
+     > adapt cortical surfaces
+     ... save output volumes
+     > dilating cortical regions
+     ... save output volumes 
+ ... working on multiscale parcellation, SCALE 3
+     > resample fsaverage CorticalSurface to individual CorticalSurface
+     > generate Nifti volume from annotation
+     > relabel cortical and subcortical regions for consistency between resolutions
+     > adapt cortical surfaces
+     ... save output volumes
+     > dilating cortical regions
+     ... save output volumes 
+ ... working on multiscale parcellation, SCALE 2
+     > resample fsaverage CorticalSurface to individual CorticalSurface
+     > generate Nifti volume from annotation
+     > relabel cortical and subcortical regions for consistency between resolutions
+     > adapt cortical surfaces
+     ... save output volumes
+     > dilating cortical regions
+     ... save output volumes 
+ ... working on multiscale parcellation, SCALE 1
+     > resample fsaverage CorticalSurface to individual CorticalSurface
+     > generate Nifti volume from annotation
+     > relabel cortical and subcortical regions for consistency between resolutions
+     > adapt cortical surfaces
+     ... save output volumes
+     > dilating cortical regions
+     ... save output volumes 
+     ... Creating gray matter mask from SCALE 1...
+         Save gray matter mask to /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/gmmask.nii.gz
+[ DONE ]
+250815-14:36:24,256 nipype.interface INFO:
+	   > Create white matter mask
+250815-14:36:24,257 nipype.interface INFO:
+	     ... FreeSurfer dir: /output_dir/freesurfer-7.1.1/sub-001_ses-1
+250815-14:36:24,257 nipype.interface INFO:
+	     > load ribbon
+250815-14:36:24,304 nipype.interface INFO:
+	     > Extract right and left wm
+250815-14:36:24,717 nipype.interface INFO:
+	      > Load aseg
+250815-14:36:24,987 nipype.interface INFO:
+	     > Ventricle erosion
+250815-14:36:25,260 nipype.interface INFO:
+	     > Save CSF mask
+250815-14:36:28,290 nipype.interface INFO:
+	     > Grey nuclei, either with or without erosion
+250815-14:36:32,415 nipype.interface INFO:
+	     > Remove remaining structure, e.g. brainstem
+250815-14:36:32,770 nipype.interface INFO:
+	     > Removing lateral ventricles and eroded grey nuclei and brainstem from white matter mask
+250815-14:36:32,771 nipype.interface INFO:
+	     > Save white matter mask: /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/fsmask_1mm.nii.gz
+250815-14:36:33,880 nipype.interface INFO:
+	 0
+250815-14:36:34,783 nipype.interface INFO:
+	 0
+mri_convert -rl /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/rawavg.mgz -rt nearest /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/aseg.nii.gz -nc aseg.nii.gz 
+reading from /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/aseg.nii.gz...
+TR=1000.00, TE=0.00, TI=0.00, flip angle=0.00
+i_ras = (-1, 0, 0)
+j_ras = (0, 0, -1)
+k_ras = (0, 1, 0)
+reading template info from volume /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/rawavg.mgz...
+writing to aseg.nii.gz...
+mri_convert -rl /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/rawavg.mgz -rt nearest /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/ribbon.nii.gz -nc ribbon.nii.gz 
+reading from /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/ribbon.nii.gz...
+TR=1000.00, TE=0.00, TI=0.00, flip angle=0.00
+i_ras = (-1, 0, 0)
+j_ras = (0, 0, -1)
+k_ras = (0, 1, 0)
+reading template info from volume /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/rawavg.mgz...
+writing to ribbon.nii.gz...
+mri_convert -rl /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/rawavg.mgz -rt nearest /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/fsmask_1mm.nii.gz -nc fsmask_1mm.nii.gz 
+reading from /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/fsmask_1mm.nii.gz...
+TR=1000.00, TE=0.00, TI=0.00, flip angle=0.00
+i_ras = (-1, 0, 0)
+j_ras = (0, 0, -1)
+k_ras = (0, 1, 0)
+reading template info from volume /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/rawavg.mgz...
+writing to fsmask_1mm.nii.gz...
+mri_convert -rl /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/rawavg.mgz -rt nearest /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/csf_mask.nii.gz -nc csf_mask.nii.gz 
+reading from /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/csf_mask.nii.gz...
+TR=1000.00, TE=0.00, TI=0.00, flip angle=0.00
+i_ras = (-1, 0, 0)
+j_ras = (0, 0, -1)
+k_ras = (0, 1, 0)
+reading template info from volume /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/rawavg.mgz...
+writing to csf_mask.nii.gz...
+mri_convert -rl /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/rawavg.mgz -rt nearest /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/gmmask.nii.gz -nc T1w_class-GM.nii.gz 
+reading from /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/gmmask.nii.gz...
+INFO: this is an unsiged short. I'll try to read it, but
+      it might not work if there are values over 32k
+TR=1000.00, TE=0.00, TI=0.00, flip angle=0.00
+i_ras = (-1, 0, 0)
+j_ras = (0, 0, -1)
+k_ras = (0, 1, 0)
+reading template info from volume /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/rawavg.mgz...
+writing to T1w_class-GM.nii.gz...
+mri_convert -rl /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/rawavg.mgz -rt nearest /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/aparc+aseg.mgz -nc aparc+aseg.native.nii.gz 
+reading from /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/aparc+aseg.mgz...
+TR=1000.00, TE=0.00, TI=0.00, flip angle=0.00
+i_ras = (-1, 0, 0)
+j_ras = (0, 0, -1)
+k_ras = (0, 1, 0)
+reading template info from volume /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/rawavg.mgz...
+writing to aparc+aseg.native.nii.gz...
+mri_convert -rl /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/rawavg.mgz -rt nearest /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/ROI_scale1_Lausanne2018.nii.gz -nc ROI_Lausanne2018_scale1.nii.gz 
+reading from /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/ROI_scale1_Lausanne2018.nii.gz...
+INFO: this is an unsiged short. I'll try to read it, but
+      it might not work if there are values over 32k
+TR=1000.00, TE=0.00, TI=0.00, flip angle=0.00
+i_ras = (-1, 0, 0)
+j_ras = (0, 0, -1)
+k_ras = (0, 1, 0)
+reading template info from volume /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/rawavg.mgz...
+writing to ROI_Lausanne2018_scale1.nii.gz...
+mri_convert -rl /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/rawavg.mgz -rt nearest /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/ROIv_scale1_Lausanne2018.nii.gz -nc ROIv_Lausanne2018_scale1.nii.gz 
+reading from /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/ROIv_scale1_Lausanne2018.nii.gz...
+INFO: this is an unsiged short. I'll try to read it, but
+      it might not work if there are values over 32k
+TR=1000.00, TE=0.00, TI=0.00, flip angle=0.00
+i_ras = (-1, 0, 0)
+j_ras = (0, 0, -1)
+k_ras = (0, 1, 0)
+reading template info from volume /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/rawavg.mgz...
+writing to ROIv_Lausanne2018_scale1.nii.gz...
+mri_convert -rl /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/rawavg.mgz -rt nearest /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/ROI_scale2_Lausanne2018.nii.gz -nc ROI_Lausanne2018_scale2.nii.gz 
+reading from /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/ROI_scale2_Lausanne2018.nii.gz...
+INFO: this is an unsiged short. I'll try to read it, but
+      it might not work if there are values over 32k
+TR=1000.00, TE=0.00, TI=0.00, flip angle=0.00
+i_ras = (-1, 0, 0)
+j_ras = (0, 0, -1)
+k_ras = (0, 1, 0)
+reading template info from volume /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/rawavg.mgz...
+writing to ROI_Lausanne2018_scale2.nii.gz...
+mri_convert -rl /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/rawavg.mgz -rt nearest /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/ROIv_scale2_Lausanne2018.nii.gz -nc ROIv_Lausanne2018_scale2.nii.gz 
+reading from /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/ROIv_scale2_Lausanne2018.nii.gz...
+INFO: this is an unsiged short. I'll try to read it, but
+      it might not work if there are values over 32k
+TR=1000.00, TE=0.00, TI=0.00, flip angle=0.00
+i_ras = (-1, 0, 0)
+j_ras = (0, 0, -1)
+k_ras = (0, 1, 0)
+reading template info from volume /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/rawavg.mgz...
+writing to ROIv_Lausanne2018_scale2.nii.gz...
+mri_convert -rl /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/rawavg.mgz -rt nearest /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/ROI_scale3_Lausanne2018.nii.gz -nc ROI_Lausanne2018_scale3.nii.gz 
+reading from /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/ROI_scale3_Lausanne2018.nii.gz...
+INFO: this is an unsiged short. I'll try to read it, but
+      it might not work if there are values over 32k
+TR=1000.00, TE=0.00, TI=0.00, flip angle=0.00
+i_ras = (-1, 0, 0)
+j_ras = (0, 0, -1)
+k_ras = (0, 1, 0)
+reading template info from volume /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/rawavg.mgz...
+writing to ROI_Lausanne2018_scale3.nii.gz...
+mri_convert -rl /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/rawavg.mgz -rt nearest /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/ROIv_scale3_Lausanne2018.nii.gz -nc ROIv_Lausanne2018_scale3.nii.gz 
+reading from /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/ROIv_scale3_Lausanne2018.nii.gz...
+INFO: this is an unsiged short. I'll try to read it, but
+      it might not work if there are values over 32k
+TR=1000.00, TE=0.00, TI=0.00, flip angle=0.00
+i_ras = (-1, 0, 0)
+j_ras = (0, 0, -1)
+k_ras = (0, 1, 0)
+reading template info from volume /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/rawavg.mgz...
+writing to ROIv_Lausanne2018_scale3.nii.gz...
+mri_convert -rl /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/rawavg.mgz -rt nearest /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/ROI_scale4_Lausanne2018.nii.gz -nc ROI_Lausanne2018_scale4.nii.gz 
+reading from /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/ROI_scale4_Lausanne2018.nii.gz...
+INFO: this is an unsiged short. I'll try to read it, but
+      it might not work if there are values over 32k
+TR=1000.00, TE=0.00, TI=0.00, flip angle=0.00
+i_ras = (-1, 0, 0)
+j_ras = (0, 0, -1)
+k_ras = (0, 1, 0)
+reading template info from volume /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/rawavg.mgz...
+writing to ROI_Lausanne2018_scale4.nii.gz...
+mri_convert -rl /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/rawavg.mgz -rt nearest /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/ROIv_scale4_Lausanne2018.nii.gz -nc ROIv_Lausanne2018_scale4.nii.gz 
+reading from /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/ROIv_scale4_Lausanne2018.nii.gz...
+INFO: this is an unsiged short. I'll try to read it, but
+      it might not work if there are values over 32k
+TR=1000.00, TE=0.00, TI=0.00, flip angle=0.00
+i_ras = (-1, 0, 0)
+j_ras = (0, 0, -1)
+k_ras = (0, 1, 0)
+reading template info from volume /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/rawavg.mgz...
+writing to ROIv_Lausanne2018_scale4.nii.gz...
+mri_convert -rl /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/rawavg.mgz -rt nearest /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/ROI_scale5_Lausanne2018.nii.gz -nc ROI_Lausanne2018_scale5.nii.gz 
+reading from /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/ROI_scale5_Lausanne2018.nii.gz...
+INFO: this is an unsiged short. I'll try to read it, but
+      it might not work if there are values over 32k
+TR=1000.00, TE=0.00, TI=0.00, flip angle=0.00
+i_ras = (-1, 0, 0)
+j_ras = (0, 0, -1)
+k_ras = (0, 1, 0)
+reading template info from volume /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/rawavg.mgz...
+writing to ROI_Lausanne2018_scale5.nii.gz...
+mri_convert -rl /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/rawavg.mgz -rt nearest /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/ROIv_scale5_Lausanne2018.nii.gz -nc ROIv_Lausanne2018_scale5.nii.gz 
+reading from /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/ROIv_scale5_Lausanne2018.nii.gz...
+INFO: this is an unsiged short. I'll try to read it, but
+      it might not work if there are values over 32k
+TR=1000.00, TE=0.00, TI=0.00, flip angle=0.00
+i_ras = (-1, 0, 0)
+j_ras = (0, 0, -1)
+k_ras = (0, 1, 0)
+reading template info from volume /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/rawavg.mgz...
+writing to ROIv_Lausanne2018_scale5.nii.gz...
+mri_convert -rl /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/rawavg.mgz -rt nearest /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/fsmask_1mm_eroded.nii.gz -nc wm_eroded.nii.gz 
+reading from /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/fsmask_1mm_eroded.nii.gz...
+TR=1000.00, TE=0.00, TI=0.00, flip angle=0.00
+i_ras = (-1, 0, 0)
+j_ras = (0, 0, -1)
+k_ras = (0, 1, 0)
+reading template info from volume /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/rawavg.mgz...
+writing to wm_eroded.nii.gz...
+mri_convert -rl /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/rawavg.mgz -rt nearest /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/csf_mask_eroded.nii.gz -nc csf_eroded.nii.gz 
+reading from /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/csf_mask_eroded.nii.gz...
+TR=1000.00, TE=0.00, TI=0.00, flip angle=0.00
+i_ras = (-1, 0, 0)
+j_ras = (0, 0, -1)
+k_ras = (0, 1, 0)
+reading template info from volume /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/rawavg.mgz...
+writing to csf_eroded.nii.gz...
+mri_convert -rl /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/rawavg.mgz -rt nearest /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/brainmask_eroded.nii.gz -nc brain_eroded.nii.gz 
+reading from /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/brainmask_eroded.nii.gz...
+TR=1000.00, TE=0.00, TI=0.00, flip angle=0.00
+i_ras = (-1, 0, 0)
+j_ras = (0, 0, -1)
+k_ras = (0, 1, 0)
+reading template info from volume /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/rawavg.mgz...
+writing to brain_eroded.nii.gz...
+mri_convert -rl /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/rawavg.mgz -rt nearest /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/brainmask.nii.gz -nc brain_mask.nii.gz 
+reading from /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/brainmask.nii.gz...
+TR=1000.00, TE=0.00, TI=0.00, flip angle=0.00
+i_ras = (-1, 0, 0)
+j_ras = (0, 0, -1)
+k_ras = (0, 1, 0)
+reading template info from volume /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/rawavg.mgz...
+writing to brain_mask.nii.gz...
+mri_convert -rl /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/rawavg.mgz -rt cubic /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/T1.nii.gz -nc T1.nii.gz 
+reading from /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/T1.nii.gz...
+TR=1000.00, TE=0.00, TI=0.00, flip angle=0.00
+i_ras = (-1, 0, 0)
+j_ras = (0, 0, -1)
+k_ras = (0, 1, 0)
+reading template info from volume /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/rawavg.mgz...
+writing to T1.nii.gz...
+mri_convert -rl /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/rawavg.mgz -rt cubic /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/brain.nii.gz -nc brain.nii.gz 
+reading from /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/brain.nii.gz...
+TR=1000.00, TE=0.00, TI=0.00, flip angle=0.00
+i_ras = (-1, 0, 0)
+j_ras = (0, 0, -1)
+k_ras = (0, 1, 0)
+reading template info from volume /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/rawavg.mgz...
+writing to brain.nii.gz...
+    > Load mask /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/fsmask_1mm.nii.gz
+631249.0
+465969
+320414
+    > Save eroded mask to: /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/fsmask_1mm_eroded.nii.gz
+    > Load mask /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/csf_mask.nii.gz
+46807.0
+34697
+25112
+    > Save eroded mask to: /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/csf_mask_eroded.nii.gz
+    > Load mask /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/brainmask.nii.gz
+2003072.0
+1921570
+1848010
+    > Save eroded mask to: /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/brainmask_eroded.nii.gz
+Cropping datasets
+Processing /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/aseg.nii.gz:
+Processing /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/ribbon.nii.gz:
+Processing /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/fsmask_1mm.nii.gz:
+Processing /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/csf_mask.nii.gz:
+Processing /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/gmmask.nii.gz:
+Processing /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/aparc+aseg.mgz:
+Processing /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/ROI_scale1_Lausanne2018.nii.gz:
+Processing /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/ROIv_scale1_Lausanne2018.nii.gz:
+Processing /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/ROI_scale2_Lausanne2018.nii.gz:
+Processing /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/ROIv_scale2_Lausanne2018.nii.gz:
+Processing /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/ROI_scale3_Lausanne2018.nii.gz:
+Processing /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/ROIv_scale3_Lausanne2018.nii.gz:
+Processing /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/ROI_scale4_Lausanne2018.nii.gz:
+Processing /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/ROIv_scale4_Lausanne2018.nii.gz:
+Processing /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/ROI_scale5_Lausanne2018.nii.gz:
+Processing /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/ROIv_scale5_Lausanne2018.nii.gz:
+Processing /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/fsmask_1mm_eroded.nii.gz:
+Processing /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/csf_mask_eroded.nii.gz:
+Processing /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/brainmask_eroded.nii.gz:
+Processing /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/brainmask.nii.gz:
+Processing /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/T1.nii.gz:
+Processing /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/brain.nii.gz:
+250815-14:36:59,962 nipype.workflow INFO:
+	 [Node] Finished "Lausanne2018_parcellation", elapsed time 1143.394351s.
+250815-14:37:01,503 nipype.workflow INFO:
+	 [Job 4] Completed (anatomical_pipeline.parcellation_stage.Lausanne2018_parcellation).
+250815-14:37:01,504 nipype.workflow INFO:
+	 [MultiProc] Running 0 tasks, and 1 jobs ready. Free memory (GB): 1360.44/1360.44, Free processors: 1/1.
+250815-14:37:01,682 nipype.workflow INFO:
+	 [Node] Setting-up "anatomical_pipeline.parcellation_stage.parcThal" in "/output_dir/nipype-1.8.0/sub-001/ses-1/anatomical_pipeline/parcellation_stage/parcThal".
+250815-14:37:01,768 nipype.workflow INFO:
+	 [Node] Executing "parcThal" <cmtklib.parcellation.ParcellateThalamus>
+250815-14:37:01,769 nipype.interface INFO:
+	 Parcellation of Thalamic Nuclei
+250815-14:37:01,770 nipype.interface INFO:
+	 =============================================
+250815-14:37:01,770 nipype.interface INFO:
+	 - Input T1w image:
+  /output_dir/nipype-1.8.0/sub-001/ses-1/anatomical_pipeline/parcellation_stage/Lausanne2018_parcellation/T1.nii.gz
+
+250815-14:37:01,770 nipype.interface INFO:
+	 - Template image:
+  /opt/conda/envs/py37cmp-core/lib/python3.7/site-packages/cmtklib/data/segmentation/thalamus2018/mni_icbm152_t1_tal_nlin_sym_09b_hires_1.nii.gz
+
+250815-14:37:01,770 nipype.interface INFO:
+	 - Thalamic nuclei maps:
+  /opt/conda/envs/py37cmp-core/lib/python3.7/site-packages/cmtklib/data/segmentation/thalamus2018/Thalamus_Nuclei-HCP-4DSPAMs.nii.gz
+
+250815-14:37:03,504 nipype.workflow INFO:
+	 [MultiProc] Running 1 tasks, and 0 jobs ready. Free memory (GB): 1360.24/1360.44, Free processors: 0/1.
+                     Currently running:
+                       * anatomical_pipeline.parcellation_stage.parcThal
+250815-14:37:04,230 nipype.interface INFO:
+	 b'movvol /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/aparc+aseg.mgz\ntargvol /output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/rawavg.mgz\noutvol /output_dir/freesurfer-7.1.1/sub-001_ses-1/tmp/aparc+aseg.nii.gz\ninvert 0\ntal    0\ntalres 2\nregheader 1\nnoresample 0\ninterp  nearest (0)\nprecision  float (3)\nGdiag_no  -1\nSynth      0\nSynthSeed  1756099991\n\nComputing registration based on scanner-to-scanner\n\nFinal tkRAS-to-tkRAS Matrix is:\n 1.00000   0.00000   0.00000   0.00000;\n 0.00000   1.00000   0.00000   0.00000;\n 0.00000   0.00000   1.00000   0.00000;\n 0.00000   0.00000   0.00000   1.00000;\n\n\nVox2Vox Matrix is:\n 1.00000   0.00000   0.00000   0.00000;\n 0.00000   1.00000   0.00000   0.00000;\n 0.00000   0.00000   1.00000   0.00000;\n 0.00000   0.00000   0.00000   1.00000;\n\nResampling\nOutput registration matrix is identity\n\nmri_vol2vol done'
+250815-14:37:04,471 nipype.interface INFO:
+	 Processing cmd: antsRegistrationSyNQuick.sh -p f -d 3 -f /output_dir/nipype-1.8.0/sub-001/ses-1/anatomical_pipeline/parcellation_stage/Lausanne2018_parcellation/T1.nii.gz -m /opt/conda/envs/py37cmp-core/lib/python3.7/site-packages/cmtklib/data/segmentation/thalamus2018/mni_icbm152_t1_tal_nlin_sym_09b_hires_1.nii.gz -t s -n 12 -o /output_dir/nipype-1.8.0/sub-001/ses-1/anatomical_pipeline/parcellation_stage/parcThal/T1_Ind2temp
+250815-14:47:49,422 nipype.interface INFO:
+	 b'--------------------------------------------------------------------------------------\n Mapping parameters\n--------------------------------------------------------------------------------------\n ANTSPATH is /opt/conda/envs/py37cmp-core/bin\n\n Dimensionality:           3\n Output name prefix:       /output_dir/nipype-1.8.0/sub-001/ses-1/anatomical_pipeline/parcellation_stage/parcThal/T1_Ind2temp\n Fixed images:             /output_dir/nipype-1.8.0/sub-001/ses-1/anatomical_pipeline/parcellation_stage/Lausanne2018_parcellation/T1.nii.gz\n Moving images:            /opt/conda/envs/py37cmp-core/lib/python3.7/site-packages/cmtklib/data/segmentation/thalamus2018/mni_icbm152_t1_tal_nlin_sym_09b_hires_1.nii.gz\n Number of threads:        12\n Spline distance:          26\n Transform type:           s\n MI histogram bins:        32\n Precision:                f\n Use histogram matching    0\n======================================================================================\n antsRegistration call:\n--------------------------------------------------------------------------------------\n/opt/conda/envs/py37cmp-core/bin/antsRegistration --verbose 1 --dimensionality 3 --float 1 --output [/output_dir/nipype-1.8.0/sub-001/ses-1/anatomical_pipeline/parcellation_stage/parcThal/T1_Ind2temp,/output_dir/nipype-1.8.0/sub-001/ses-1/anatomical_pipeline/parcellation_stage/parcThal/T1_Ind2tempWarped.nii.gz,/output_dir/nipype-1.8.0/sub-001/ses-1/anatomical_pipeline/parcellation_stage/parcThal/T1_Ind2tempInverseWarped.nii.gz] --interpolation Linear --use-histogram-matching 0 --winsorize-image-intensities [0.005,0.995] --initial-moving-transform [/output_dir/nipype-1.8.0/sub-001/ses-1/anatomical_pipeline/parcellation_stage/Lausanne2018_parcellation/T1.nii.gz,/opt/conda/envs/py37cmp-core/lib/python3.7/site-packages/cmtklib/data/segmentation/thalamus2018/mni_icbm152_t1_tal_nlin_sym_09b_hires_1.nii.gz,1] --transform Rigid[0.1] --metric MI[/output_dir/nipype-1.8.0/sub-001/ses-1/anatomical_pipeline/parcellation_stage/Lausanne2018_parcellation/T1.nii.gz,/opt/conda/envs/py37cmp-core/lib/python3.7/site-packages/cmtklib/data/segmentation/thalamus2018/mni_icbm152_t1_tal_nlin_sym_09b_hires_1.nii.gz,1,32,Regular,0.25] --convergence [1000x500x250x0,1e-6,10] --shrink-factors 8x4x2x1 --smoothing-sigmas 3x2x1x0vox --transform Affine[0.1] --metric MI[/output_dir/nipype-1.8.0/sub-001/ses-1/anatomical_pipeline/parcellation_stage/Lausanne2018_parcellation/T1.nii.gz,/opt/conda/envs/py37cmp-core/lib/python3.7/site-packages/cmtklib/data/segmentation/thalamus2018/mni_icbm152_t1_tal_nlin_sym_09b_hires_1.nii.gz,1,32,Regular,0.25] --convergence [1000x500x250x0,1e-6,10] --shrink-factors 8x4x2x1 --smoothing-sigmas 3x2x1x0vox --transform SyN[0.1,3,0] --metric MI[/output_dir/nipype-1.8.0/sub-001/ses-1/anatomical_pipeline/parcellation_stage/Lausanne2018_parcellation/T1.nii.gz,/opt/conda/envs/py37cmp-core/lib/python3.7/site-packages/cmtklib/data/segmentation/thalamus2018/mni_icbm152_t1_tal_nlin_sym_09b_hires_1.nii.gz,1,32] --convergence [100x70x50x0,1e-6,10] --shrink-factors 8x4x2x1 --smoothing-sigmas 3x2x1x0vox\n--------------------------------------------------------------------------------------\nAll_Command_lines_OK\nUsing single precision for computations.\n=============================================================================\nThe composite transform comprises the following transforms (in order): \n  1. Center of mass alignment using fixed image: /output_dir/nipype-1.8.0/sub-001/ses-1/anatomical_pipeline/parcellation_stage/Lausanne2018_parcellation/T1.nii.gz and moving image: /opt/conda/envs/py37cmp-core/lib/python3.7/site-packages/cmtklib/data/segmentation/thalamus2018/mni_icbm152_t1_tal_nlin_sym_09b_hires_1.nii.gz (type = Euler3DTransform)\n=============================================================================\n  number of levels = 4\n  number of levels = 4\n  number of levels = 4\n  fixed image: /output_dir/nipype-1.8.0/sub-001/ses-1/anatomical_pipeline/parcellation_stage/Lausanne2018_parcellation/T1.nii.gz\n  moving image: /opt/conda/envs/py37cmp-core/lib/python3.7/site-packages/cmtklib/data/segmentation/thalamus2018/mni_icbm152_t1_tal_nlin_sym_09b_hires_1.nii.gz\n  fixed image: /output_dir/nipype-1.8.0/sub-001/ses-1/anatomical_pipeline/parcellation_stage/Lausanne2018_parcellation/T1.nii.gz\n  moving image: /opt/conda/envs/py37cmp-core/lib/python3.7/site-packages/cmtklib/data/segmentation/thalamus2018/mni_icbm152_t1_tal_nlin_sym_09b_hires_1.nii.gz\n  fixed image: /output_dir/nipype-1.8.0/sub-001/ses-1/anatomical_pipeline/parcellation_stage/Lausanne2018_parcellation/T1.nii.gz\n  moving image: /opt/conda/envs/py37cmp-core/lib/python3.7/site-packages/cmtklib/data/segmentation/thalamus2018/mni_icbm152_t1_tal_nlin_sym_09b_hires_1.nii.gz\nDimension = 3\nNumber of stages = 3\nUse Histogram Matching false\nWinsorize image intensities true\nLower quantile = 0.005\nUpper quantile = 0.995\nStage 1 State\n   Image metric = Mattes\n     Fixed image = Image (0x5324e90)\n  RTTI typeinfo:   itk::Image<float, 3u>\n  Reference Count: 2\n  Modified Time: 1621\n  Debug: Off\n  Object Name: \n  Observers: \n    none\n  Source: (none)\n  Source output name: (none)\n  Release Data: Off\n  Data Released: False\n  Global Release Data: Off\n  PipelineMTime: 0\n  UpdateMTime: 1444\n  RealTimeStamp: 0 seconds \n  LargestPossibleRegion: \n    Dimension: 3\n    Index: [0, 0, 0]\n    Size: [256, 256, 256]\n  BufferedRegion: \n    Dimension: 3\n    Index: [0, 0, 0]\n    Size: [256, 256, 256]\n  RequestedRegion: \n    Dimension: 3\n    Index: [0, 0, 0]\n    Size: [256, 256, 256]\n  Spacing: [1, 1, 1]\n  Origin: [-127, 145, 147]\n  Direction: \n1 0 0\n0 -0 -1\n0 -1 -0\n\n  IndexToPointMatrix: \n1 0 0\n0 0 -1\n0 -1 0\n\n  PointToIndexMatrix: \n1 0 0\n0 0 -1\n0 -1 0\n\n  Inverse Direction: \n1 0 0\n0 0 -1\n0 -1 0\n\n  PixelContainer: \n    ImportImageContainer (0x5325e60)\n      RTTI typeinfo:   itk::ImportImageContainer<unsigned long, float>\n      Reference Count: 1\n      Modified Time: 1441\n      Debug: Off\n      Object Name: \n      Observers: \n        none\n      Pointer: 0x14bf94d07010\n      Container manages memory: true\n      Size: 16777216\n      Capacity: 16777216\n\n     Moving image = Image (0x53225c0)\n  RTTI typeinfo:   itk::Image<float, 3u>\n  Reference Count: 2\n  Modified Time: 1622\n  Debug: Off\n  Object Name: \n  Observers: \n    none\n  Source: (none)\n  Source output name: (none)\n  Release Data: Off\n  Data Released: False\n  Global Release Data: Off\n  PipelineMTime: 0\n  UpdateMTime: 1619\n  RealTimeStamp: 0 seconds \n  LargestPossibleRegion: \n    Dimension: 3\n    Index: [0, 0, 0]\n    Size: [197, 233, 189]\n  BufferedRegion: \n    Dimension: 3\n    Index: [0, 0, 0]\n    Size: [197, 233, 189]\n  RequestedRegion: \n    Dimension: 3\n    Index: [0, 0, 0]\n    Size: [197, 233, 189]\n  Spacing: [1, 1, 1]\n  Origin: [98, 134, -72]\n  Direction: \n-1 0 0\n0 -1 0\n0 0 1\n\n  IndexToPointMatrix: \n-1 0 0\n0 -1 0\n0 0 1\n\n  PointToIndexMatrix: \n-1 0 0\n0 -1 0\n0 0 1\n\n  Inverse Direction: \n-1 0 0\n0 -1 0\n0 0 1\n\n  PixelContainer: \n    ImportImageContainer (0x5329a80)\n      RTTI typeinfo:   itk::ImportImageContainer<unsigned long, float>\n      Reference Count: 1\n      Modified Time: 1616\n      Debug: Off\n      Object Name: \n      Observers: \n        none\n      Pointer: 0x14bf92bef010\n      Container manages memory: true\n      Size: 8675289\n      Capacity: 8675289\n\n     Weighting = 1\n     Sampling strategy = regular\n     Number of bins = 32\n     Radius = 4\n     Sampling percentage  = 0.25\n   Transform = Rigid\n     Gradient step = 0.1\n     Update field sigma (voxel space) = 0\n     Total field sigma (voxel space) = 0\n     Update field time sigma = 0\n     Total field time sigma  = 0\n     Number of time indices = 0\n     Number of time point samples = 0\nStage 2 State\n   Image metric = Mattes\n     Fixed image = Image (0x5325180)\n  RTTI typeinfo:   itk::Image<float, 3u>\n  Reference Count: 2\n  Modified Time: 1973\n  Debug: Off\n  Object Name: \n  Observers: \n    none\n  Source: (none)\n  Source output name: (none)\n  Release Data: Off\n  Data Released: False\n  Global Release Data: Off\n  PipelineMTime: 0\n  UpdateMTime: 1796\n  RealTimeStamp: 0 seconds \n  LargestPossibleRegion: \n    Dimension: 3\n    Index: [0, 0, 0]\n    Size: [256, 256, 256]\n  BufferedRegion: \n    Dimension: 3\n    Index: [0, 0, 0]\n    Size: [256, 256, 256]\n  RequestedRegion: \n    Dimension: 3\n    Index: [0, 0, 0]\n    Size: [256, 256, 256]\n  Spacing: [1, 1, 1]\n  Origin: [-127, 145, 147]\n  Direction: \n1 0 0\n0 -0 -1\n0 -1 -0\n\n  IndexToPointMatrix: \n1 0 0\n0 0 -1\n0 -1 0\n\n  PointToIndexMatrix: \n1 0 0\n0 0 -1\n0 -1 0\n\n  Inverse Direction: \n1 0 0\n0 0 -1\n0 -1 0\n\n  PixelContainer: \n    ImportImageContainer (0x5326400)\n      RTTI typeinfo:   itk::ImportImageContainer<unsigned long, float>\n      Reference Count: 1\n      Modified Time: 1793\n      Debug: Off\n      Object Name: \n      Observers: \n        none\n      Pointer: 0x14bf8ebee010\n      Container manages memory: true\n      Size: 16777216\n      Capacity: 16777216\n\n     Moving image = Image (0x5334740)\n  RTTI typeinfo:   itk::Image<float, 3u>\n  Reference Count: 2\n  Modified Time: 1974\n  Debug: Off\n  Object Name: \n  Observers: \n    none\n  Source: (none)\n  Source output name: (none)\n  Release Data: Off\n  Data Released: False\n  Global Release Data: Off\n  PipelineMTime: 0\n  UpdateMTime: 1971\n  RealTimeStamp: 0 seconds \n  LargestPossibleRegion: \n    Dimension: 3\n    Index: [0, 0, 0]\n    Size: [197, 233, 189]\n  BufferedRegion: \n    Dimension: 3\n    Index: [0, 0, 0]\n    Size: [197, 233, 189]\n  RequestedRegion: \n    Dimension: 3\n    Index: [0, 0, 0]\n    Size: [197, 233, 189]\n  Spacing: [1, 1, 1]\n  Origin: [98, 134, -72]\n  Direction: \n-1 0 0\n0 -1 0\n0 0 1\n\n  IndexToPointMatrix: \n-1 0 0\n0 -1 0\n0 0 1\n\n  PointToIndexMatrix: \n-1 0 0\n0 -1 0\n0 0 1\n\n  Inverse Direction: \n-1 0 0\n0 -1 0\n0 0 1\n\n  PixelContainer: \n    ImportImageContainer (0x5336250)\n      RTTI typeinfo:   itk::ImportImageContainer<unsigned long, float>\n      Reference Count: 1\n      Modified Time: 1968\n      Debug: Off\n      Object Name: \n      Observers: \n        none\n      Pointer: 0x14bf8cad6010\n      Container manages memory: true\n      Size: 8675289\n      Capacity: 8675289\n\n     Weighting = 1\n     Sampling strategy = regular\n     Number of bins = 32\n     Radius = 4\n     Sampling percentage  = 0.25\n   Transform = Affine\n     Gradient step = 0.1\n     Update field sigma (voxel space) = 0\n     Total field sigma (voxel space) = 0\n     Update field time sigma = 0\n     Total field time sigma  = 0\n     Number of time indices = 0\n     Number of time point samples = 0\nStage 3 State\n   Image metric = Mattes\n     Fixed image = Image (0x5338960)\n  RTTI typeinfo:   itk::Image<float, 3u>\n  Reference Count: 2\n  Modified Time: 2325\n  Debug: Off\n  Object Name: \n  Observers: \n    none\n  Source: (none)\n  Source output name: (none)\n  Release Data: Off\n  Data Released: False\n  Global Release Data: Off\n  PipelineMTime: 0\n  UpdateMTime: 2148\n  RealTimeStamp: 0 seconds \n  LargestPossibleRegion: \n    Dimension: 3\n    Index: [0, 0, 0]\n    Size: [256, 256, 256]\n  BufferedRegion: \n    Dimension: 3\n    Index: [0, 0, 0]\n    Size: [256, 256, 256]\n  RequestedRegion: \n    Dimension: 3\n    Index: [0, 0, 0]\n    Size: [256, 256, 256]\n  Spacing: [1, 1, 1]\n  Origin: [-127, 145, 147]\n  Direction: \n1 0 0\n0 -0 -1\n0 -1 -0\n\n  IndexToPointMatrix: \n1 0 0\n0 0 -1\n0 -1 0\n\n  PointToIndexMatrix: \n1 0 0\n0 0 -1\n0 -1 0\n\n  Inverse Direction: \n1 0 0\n0 0 -1\n0 -1 0\n\n  PixelContainer: \n    ImportImageContainer (0x5338bf0)\n      RTTI typeinfo:   itk::ImportImageContainer<unsigned long, float>\n      Reference Count: 1\n      Modified Time: 2145\n      Debug: Off\n      Object Name: \n      Observers: \n        none\n      Pointer: 0x14bf88ad5010\n      Container manages memory: true\n      Size: 16777216\n      Capacity: 16777216\n\n     Moving image = Image (0x5338c50)\n  RTTI typeinfo:   itk::Image<float, 3u>\n  Reference Count: 2\n  Modified Time: 2326\n  Debug: Off\n  Object Name: \n  Observers: \n    none\n  Source: (none)\n  Source output name: (none)\n  Release Data: Off\n  Data Released: False\n  Global Release Data: Off\n  PipelineMTime: 0\n  UpdateMTime: 2323\n  RealTimeStamp: 0 seconds \n  LargestPossibleRegion: \n    Dimension: 3\n    Index: [0, 0, 0]\n    Size: [197, 233, 189]\n  BufferedRegion: \n    Dimension: 3\n    Index: [0, 0, 0]\n    Size: [197, 233, 189]\n  RequestedRegion: \n    Dimension: 3\n    Index: [0, 0, 0]\n    Size: [197, 233, 189]\n  Spacing: [1, 1, 1]\n  Origin: [98, 134, -72]\n  Direction: \n-1 0 0\n0 -1 0\n0 0 1\n\n  IndexToPointMatrix: \n-1 0 0\n0 -1 0\n0 0 1\n\n  PointToIndexMatrix: \n-1 0 0\n0 -1 0\n0 0 1\n\n  Inverse Direction: \n-1 0 0\n0 -1 0\n0 0 1\n\n  PixelContainer: \n    ImportImageContainer (0x5335bc0)\n      RTTI typeinfo:   itk::ImportImageContainer<unsigned long, float>\n      Reference Count: 1\n      Modified Time: 2320\n      Debug: Off\n      Object Name: \n      Observers: \n        none\n      Pointer: 0x14bf869bd010\n      Container manages memory: true\n      Size: 8675289\n      Capacity: 8675289\n\n     Weighting = 1\n     Sampling strategy = none\n     Number of bins = 32\n     Radius = 4\n     Sampling percentage  = 1\n   Transform = SyN\n     Gradient step = 0.1\n     Update field sigma (voxel space) = 3\n     Total field sigma (voxel space) = 0\n     Update field time sigma = 0\n     Total field time sigma  = 0\n     Number of time indices = 0\n     Number of time point samples = 0\nRegistration using 3 total stages.\n\nStage 0\n  iterations = 1000x500x250x0\n  convergence threshold = 1e-06\n  convergence window size = 10\n  number of levels = 4\n  using the Mattes MI metric (number of bins = 32, weight = 1)\n  preprocessing:  winsorizing the image intensities\n  Shrink factors (level 1 out of 4): [8, 8, 8]\n  Shrink factors (level 2 out of 4): [4, 4, 4]\n  Shrink factors (level 3 out of 4): [2, 2, 2]\n  Shrink factors (level 4 out of 4): [1, 1, 1]\n  smoothing sigmas per level: [3, 2, 1, 0]\n  regular sampling (percentage = 0.25)\n\n*** Running Euler3DTransform registration ***\n\nDIAGNOSTIC,Iteration,metricValue,convergenceValue,ITERATION_TIME_INDEX,SINCE_LAST\n 2DIAGNOSTIC,     1, -5.024899244308e-01, inf, 4.4455e+00, 4.4455e+00, \n 2DIAGNOSTIC,     2, -5.053943395615e-01, inf, 4.5103e+00, 6.4784e-02, \n 2DIAGNOSTIC,     3, -5.107948184013e-01, inf, 4.5732e+00, 6.2968e-02, \n 2DIAGNOSTIC,     4, -5.219851732254e-01, inf, 4.6407e+00, 6.7485e-02, \n 2DIAGNOSTIC,     5, -5.390536189079e-01, inf, 4.7011e+00, 6.0338e-02, \n 2DIAGNOSTIC,     6, -5.642571449280e-01, inf, 4.7659e+00, 6.4800e-02, \n 2DIAGNOSTIC,     7, -5.838821530342e-01, inf, 4.9227e+00, 1.5680e-01, \n 2DIAGNOSTIC,     8, -5.840680599213e-01, inf, 5.0076e+00, 8.4983e-02, \n 2DIAGNOSTIC,     9, -5.840519070625e-01, inf, 5.0816e+00, 7.3982e-02, \n 2DIAGNOSTIC,    10, -5.839770436287e-01, 1.217608619481e-02, 5.1727e+00, 9.1056e-02, \n 2DIAGNOSTIC,    11, -5.839751362801e-01, 9.861786849797e-03, 5.2696e+00, 9.6903e-02, \n 2DIAGNOSTIC,    12, -5.840124487877e-01, 7.192951627076e-03, 5.3576e+00, 8.7986e-02, \n 2DIAGNOSTIC,    13, -5.839847922325e-01, 4.528329707682e-03, 5.4511e+00, 9.3484e-02, \n 2DIAGNOSTIC,    14, -5.840057730675e-01, 2.264884766191e-03, 5.5287e+00, 7.7649e-02, \n 2DIAGNOSTIC,    15, -5.837444067001e-01, 6.626221002080e-04, 5.5992e+00, 7.0476e-02, \nDIAGNOSTIC,Iteration,metricValue,convergenceValue,ITERATION_TIME_INDEX,SINCE_LAST\n 2DIAGNOSTIC,     1, -5.341128706932e-01, inf, 8.4739e+00, 2.8747e+00, \n 2DIAGNOSTIC,     2, -5.349714756012e-01, inf, 8.7431e+00, 2.6923e-01, \n 2DIAGNOSTIC,     3, -5.356259942055e-01, inf, 9.0011e+00, 2.5797e-01, \n 2DIAGNOSTIC,     4, -5.359609127045e-01, inf, 9.2624e+00, 2.6134e-01, \n 2DIAGNOSTIC,     5, -5.365915298462e-01, inf, 9.5274e+00, 2.6499e-01, \n 2DIAGNOSTIC,     6, -5.370702147484e-01, inf, 9.7822e+00, 2.5476e-01, \n 2DIAGNOSTIC,     7, -5.381740331650e-01, inf, 1.0402e+01, 6.2020e-01, \n 2DIAGNOSTIC,     8, -5.381902456284e-01, inf, 1.0699e+01, 2.9705e-01, \n 2DIAGNOSTIC,     9, -5.381507873535e-01, inf, 1.1018e+01, 3.1877e-01, \n 2DIAGNOSTIC,    10, -5.381281971931e-01, 5.171345546842e-04, 1.1406e+01, 3.8739e-01, \n 2DIAGNOSTIC,    11, -5.381268858910e-01, 3.786750894506e-04, 1.1736e+01, 3.3052e-01, \n 2DIAGNOSTIC,    12, -5.381143689156e-01, 2.658399753273e-04, 1.2000e+01, 2.6423e-01, \n 2DIAGNOSTIC,    13, -5.381096005440e-01, 1.731529773679e-04, 1.2410e+01, 4.0989e-01, \n 2DIAGNOSTIC,    14, -5.380917787552e-01, 9.045479237102e-05, 1.2753e+01, 3.4287e-01, \n 2DIAGNOSTIC,    15, -5.380871891975e-01, 3.285670754849e-05, 1.3101e+01, 3.4765e-01, \nDIAGNOSTIC,Iteration,metricValue,convergenceValue,ITERATION_TIME_INDEX,SINCE_LAST\n 2DIAGNOSTIC,     1, -4.684464633465e-01, inf, 1.6943e+01, 3.8423e+00, \n 2DIAGNOSTIC,     2, -4.686336815357e-01, inf, 1.9186e+01, 2.2433e+00, \n 2DIAGNOSTIC,     3, -4.686371982098e-01, inf, 2.0826e+01, 1.6399e+00, \n 2DIAGNOSTIC,     4, -4.686293900013e-01, inf, 2.3082e+01, 2.2556e+00, \n 2DIAGNOSTIC,     5, -4.686317145824e-01, inf, 2.5017e+01, 1.9354e+00, \n 2DIAGNOSTIC,     6, -4.686301648617e-01, inf, 2.6961e+01, 1.9432e+00, \n 2DIAGNOSTIC,     7, -4.686304926872e-01, inf, 2.9196e+01, 2.2359e+00, \n 2DIAGNOSTIC,     8, -4.686292707920e-01, inf, 3.0837e+01, 1.6405e+00, \n 2DIAGNOSTIC,     9, -4.686288833618e-01, inf, 3.2473e+01, 1.6360e+00, \n 2DIAGNOSTIC,    10, -4.686284065247e-01, 1.363966293866e-05, 3.4405e+01, 1.9323e+00, \n 2DIAGNOSTIC,    11, -4.686278402805e-01, 2.066920160360e-06, 3.6039e+01, 1.6339e+00, \n 2DIAGNOSTIC,    12, -4.686276912689e-01, 1.944145878952e-06, 3.7664e+01, 1.6252e+00, \n 2DIAGNOSTIC,    13, -4.686276316643e-01, 2.076422788377e-06, 3.9302e+01, 1.6381e+00, \n 2DIAGNOSTIC,    14, -4.686271548271e-01, 1.861237592493e-06, 4.1232e+01, 1.9298e+00, \n 2DIAGNOSTIC,    15, -4.686271548271e-01, 1.808296019590e-06, 4.3165e+01, 1.9328e+00, \n 2DIAGNOSTIC,    16, -4.686271548271e-01, 1.730920189402e-06, 4.5086e+01, 1.9215e+00, \n 2DIAGNOSTIC,    17, -4.686271250248e-01, 1.697663947198e-06, 4.6715e+01, 1.6282e+00, \n 2DIAGNOSTIC,    18, -4.686270952225e-01, 1.641972289690e-06, 4.8356e+01, 1.6417e+00, \n 2DIAGNOSTIC,    19, -4.686270952225e-01, 1.591805585122e-06, 5.0007e+01, 1.6503e+00, \n 2DIAGNOSTIC,    20, -4.686270952225e-01, 1.540292714708e-06, 5.1653e+01, 1.6465e+00, \n 2DIAGNOSTIC,    21, -4.686270356178e-01, 1.480157720835e-06, 5.3300e+01, 1.6466e+00, \n 2DIAGNOSTIC,    22, -4.686270952225e-01, 1.426210133104e-06, 5.4941e+01, 1.6409e+00, \n 2DIAGNOSTIC,    23, -4.686270654202e-01, 1.376753630211e-06, 5.6583e+01, 1.6423e+00, \n 2DIAGNOSTIC,    24, -4.686270952225e-01, 1.320718752140e-06, 5.8228e+01, 1.6451e+00, \n 2DIAGNOSTIC,    25, -4.686270952225e-01, 1.269588096875e-06, 5.9864e+01, 1.6361e+00, \n 2DIAGNOSTIC,    26, -4.686270952225e-01, 1.222683181368e-06, 6.1521e+01, 1.6564e+00, \n 2DIAGNOSTIC,    27, -4.686270654202e-01, 1.178003344648e-06, 6.3165e+01, 1.6444e+00, \n 2DIAGNOSTIC,    28, -4.686270356178e-01, 1.135239585892e-06, 6.4820e+01, 1.6545e+00, \n 2DIAGNOSTIC,    29, -4.686270654202e-01, 1.096135292755e-06, 6.6465e+01, 1.6453e+00, \n 2DIAGNOSTIC,    30, -4.686270654202e-01, 1.059713440554e-06, 6.8103e+01, 1.6379e+00, \n 2DIAGNOSTIC,    31, -4.686270654202e-01, 1.024503490044e-06, 6.9752e+01, 1.6498e+00, \nDIAGNOSTIC,Iteration,metricValue,convergenceValue,ITERATION_TIME_INDEX,SINCE_LAST\n 2DIAGNOSTIC,     1, -4.290930628777e-01, inf, 8.2795e+01, 1.3042e+01, \n  Elapsed time (stage 0): 8.3736e+01\n\n\nStage 1\n  iterations = 1000x500x250x0\n  convergence threshold = 1.0000e-06\n  convergence window size = 10\n  number of levels = 4\n  using the Mattes MI metric (number of bins = 32, weight = 1.0000e+00)\n  preprocessing:  winsorizing the image intensities\n  Shrink factors (level 1 out of 4): [8, 8, 8]\n  Shrink factors (level 2 out of 4): [4, 4, 4]\n  Shrink factors (level 3 out of 4): [2, 2, 2]\n  Shrink factors (level 4 out of 4): [1, 1, 1]\n  smoothing sigmas per level: [3, 2, 1, 0]\n  regular sampling (percentage = 2.5000e-01)\n\n*** Running AffineTransform registration ***\n\nDIAGNOSTIC,Iteration,metricValue,convergenceValue,ITERATION_TIME_INDEX,SINCE_LAST\n 2DIAGNOSTIC,     1, -5.979992747307e-01, inf, 4.3891e+00, 4.3891e+00, \n 2DIAGNOSTIC,     2, -6.005284786224e-01, inf, 4.4561e+00, 6.6987e-02, \n 2DIAGNOSTIC,     3, -6.044211983681e-01, inf, 4.5239e+00, 6.7801e-02, \n 2DIAGNOSTIC,     4, -6.088719964027e-01, inf, 4.5861e+00, 6.2184e-02, \n 2DIAGNOSTIC,     5, -6.133148074150e-01, inf, 4.6539e+00, 6.7828e-02, \n 2DIAGNOSTIC,     6, -6.206342577934e-01, inf, 4.7164e+00, 6.2501e-02, \n 2DIAGNOSTIC,     7, -6.381405591965e-01, inf, 4.7867e+00, 7.0280e-02, \n 2DIAGNOSTIC,     8, -6.527102589607e-01, inf, 4.8671e+00, 8.0344e-02, \n 2DIAGNOSTIC,     9, -6.593996882439e-01, inf, 4.9905e+00, 1.2343e-01, \n 2DIAGNOSTIC,    10, -6.608737707138e-01, 7.410969119519e-03, 5.0647e+00, 7.4172e-02, \n 2DIAGNOSTIC,    11, -6.634363532066e-01, 6.942962761968e-03, 5.1438e+00, 7.9166e-02, \n 2DIAGNOSTIC,    12, -6.692752838135e-01, 6.234585307539e-03, 5.2728e+00, 1.2901e-01, \n 2DIAGNOSTIC,    13, -6.696888208389e-01, 5.214891396463e-03, 5.3653e+00, 9.2445e-02, \n 2DIAGNOSTIC,    14, -6.707759499550e-01, 4.057849757373e-03, 5.4454e+00, 8.0136e-02, \n 2DIAGNOSTIC,    15, -6.727287769318e-01, 2.889597788453e-03, 5.5914e+00, 1.4597e-01, \n 2DIAGNOSTIC,    16, -6.733678579330e-01, 1.821423182264e-03, 5.6734e+00, 8.1989e-02, \n 2DIAGNOSTIC,    17, -6.735962629318e-01, 1.167538692243e-03, 5.7517e+00, 7.8276e-02, \n 2DIAGNOSTIC,    18, -6.738687157631e-01, 8.416972705163e-04, 5.8296e+00, 7.7897e-02, \n 2DIAGNOSTIC,    19, -6.749358773232e-01, 6.545565556735e-04, 5.9017e+00, 7.2171e-02, \n 2DIAGNOSTIC,    20, -6.767466068268e-01, 4.969450528733e-04, 6.0477e+00, 1.4598e-01, \n 2DIAGNOSTIC,    21, -6.769026517868e-01, 3.613801673055e-04, 6.1267e+00, 7.8993e-02, \n 2DIAGNOSTIC,    22, -6.771191954613e-01, 3.263947146479e-04, 6.2047e+00, 7.7974e-02, \n 2DIAGNOSTIC,    23, -6.772699952126e-01, 2.752568689175e-04, 6.2895e+00, 8.4787e-02, \n 2DIAGNOSTIC,    24, -6.775256395340e-01, 2.259760804009e-04, 6.3863e+00, 9.6797e-02, \n 2DIAGNOSTIC,    25, -6.789350509644e-01, 2.172630920541e-04, 6.5314e+00, 1.4517e-01, \n 2DIAGNOSTIC,    26, -6.794497370720e-01, 2.076828823192e-04, 6.6082e+00, 7.6796e-02, \n 2DIAGNOSTIC,    27, -6.795479655266e-01, 1.852385321399e-04, 6.6854e+00, 7.7172e-02, \n 2DIAGNOSTIC,    28, -6.795630455017e-01, 1.518016651971e-04, 6.7675e+00, 8.2145e-02, \n 2DIAGNOSTIC,    29, -6.795844435692e-01, 1.220427584485e-04, 6.8607e+00, 9.3183e-02, \n 2DIAGNOSTIC,    30, -6.796067953110e-01, 1.089166762540e-04, 6.9953e+00, 1.3462e-01, \n 2DIAGNOSTIC,    31, -6.795449852943e-01, 8.757344767218e-05, 7.0901e+00, 9.4798e-02, \n 2DIAGNOSTIC,    32, -6.794270873070e-01, 6.101692633820e-05, 7.1843e+00, 9.4180e-02, \n 2DIAGNOSTIC,    33, -6.795035600662e-01, 3.365861630300e-05, 7.2813e+00, 9.6974e-02, \n 2DIAGNOSTIC,    34, -6.798468232155e-01, 1.195043751068e-05, 7.5095e+00, 2.2817e-01, \n 2DIAGNOSTIC,    35, -6.798464059830e-01, 7.465752787539e-06, 7.5889e+00, 7.9435e-02, \n 2DIAGNOSTIC,    36, -6.798489093781e-01, 8.835911103233e-06, 7.6712e+00, 8.2331e-02, \n 2DIAGNOSTIC,    37, -6.798517107964e-01, 1.063569470716e-05, 7.7522e+00, 8.0967e-02, \n 2DIAGNOSTIC,    38, -6.798567771912e-01, 1.159723888122e-05, 7.8480e+00, 9.5815e-02, \n 2DIAGNOSTIC,    39, -6.798617243767e-01, 1.167091795651e-05, 7.9420e+00, 9.3984e-02, \n 2DIAGNOSTIC,    40, -6.797799468040e-01, 1.007512764772e-05, 8.0170e+00, 7.4980e-02, \n 2DIAGNOSTIC,    41, -6.797854304314e-01, 7.216684934974e-06, 8.0973e+00, 8.0336e-02, \n 2DIAGNOSTIC,    42, -6.797907352448e-01, 2.746433438006e-06, 8.1735e+00, 7.6188e-02, \nDIAGNOSTIC,Iteration,metricValue,convergenceValue,ITERATION_TIME_INDEX,SINCE_LAST\n 2DIAGNOSTIC,     1, -6.010439991951e-01, inf, 1.1066e+01, 2.8922e+00, \n 2DIAGNOSTIC,     2, -6.035950779915e-01, inf, 1.1354e+01, 2.8878e-01, \n 2DIAGNOSTIC,     3, -6.055323481560e-01, inf, 1.1623e+01, 2.6884e-01, \n 2DIAGNOSTIC,     4, -6.063705682755e-01, inf, 1.1890e+01, 2.6628e-01, \n 2DIAGNOSTIC,     5, -6.068486571312e-01, inf, 1.2146e+01, 2.5687e-01, \n 2DIAGNOSTIC,     6, -6.076601147652e-01, inf, 1.2451e+01, 3.0421e-01, \n 2DIAGNOSTIC,     7, -6.077520251274e-01, inf, 1.2864e+01, 4.1346e-01, \n 2DIAGNOSTIC,     8, -6.077385544777e-01, inf, 1.3144e+01, 2.8006e-01, \n 2DIAGNOSTIC,     9, -6.078038811684e-01, inf, 1.3390e+01, 2.4615e-01, \n 2DIAGNOSTIC,    10, -6.077597141266e-01, 5.995595711283e-04, 1.3770e+01, 3.8013e-01, \n 2DIAGNOSTIC,    11, -6.077696084976e-01, 3.249207511544e-04, 1.4028e+01, 2.5774e-01, \n 2DIAGNOSTIC,    12, -6.077640652657e-01, 1.650561898714e-04, 1.4332e+01, 3.0391e-01, \n 2DIAGNOSTIC,    13, -6.077088117599e-01, 8.279651956400e-05, 1.4630e+01, 2.9773e-01, \n 2DIAGNOSTIC,    14, -6.076931953430e-01, 3.248496432207e-05, 1.4917e+01, 2.8763e-01, \nDIAGNOSTIC,Iteration,metricValue,convergenceValue,ITERATION_TIME_INDEX,SINCE_LAST\n 2DIAGNOSTIC,     1, -5.335480570793e-01, inf, 1.8705e+01, 3.7875e+00, \n 2DIAGNOSTIC,     2, -5.337918996811e-01, inf, 2.0259e+01, 1.5543e+00, \n 2DIAGNOSTIC,     3, -5.340245366096e-01, inf, 2.3121e+01, 2.8620e+00, \n 2DIAGNOSTIC,     4, -5.340876579285e-01, inf, 2.4658e+01, 1.5363e+00, \n 2DIAGNOSTIC,     5, -5.341379046440e-01, inf, 2.7191e+01, 2.5335e+00, \n 2DIAGNOSTIC,     6, -5.341374874115e-01, inf, 2.9057e+01, 1.8655e+00, \n 2DIAGNOSTIC,     7, -5.341411232948e-01, inf, 3.0894e+01, 1.8371e+00, \n 2DIAGNOSTIC,     8, -5.341334342957e-01, inf, 3.4072e+01, 3.1780e+00, \n 2DIAGNOSTIC,     9, -5.341327190399e-01, inf, 3.5619e+01, 1.5474e+00, \n 2DIAGNOSTIC,    10, -5.341348648071e-01, 5.565019455389e-05, 3.7822e+01, 2.2034e+00, \n 2DIAGNOSTIC,    11, -5.341334342957e-01, 2.553804188210e-05, 3.9703e+01, 1.8804e+00, \n 2DIAGNOSTIC,    12, -5.341323614120e-01, 8.956755664258e-06, 4.1263e+01, 1.5596e+00, \n 2DIAGNOSTIC,    13, -5.341323018074e-01, 3.835726147372e-06, 4.3143e+01, 1.8808e+00, \n 2DIAGNOSTIC,    14, -5.341318845749e-01, 1.651016532378e-06, 4.4695e+01, 1.5517e+00, \n 2DIAGNOSTIC,    15, -5.341279506683e-01, 1.453769186810e-06, 4.6263e+01, 1.5676e+00, \n 2DIAGNOSTIC,    16, -5.341326594353e-01, 1.482360630689e-06, 4.8475e+01, 2.2127e+00, \n 2DIAGNOSTIC,    17, -5.341306924820e-01, 1.608976731404e-06, 5.0033e+01, 1.5579e+00, \n 2DIAGNOSTIC,    18, -5.341306328773e-01, 1.519003717476e-06, 5.1929e+01, 1.8958e+00, \n 2DIAGNOSTIC,    19, -5.341261625290e-01, 1.315743929808e-06, 5.3810e+01, 1.8808e+00, \n 2DIAGNOSTIC,    20, -5.341270565987e-01, 1.251604203389e-06, 5.5694e+01, 1.8840e+00, \n 2DIAGNOSTIC,    21, -5.341290235519e-01, 1.235851527781e-06, 5.7912e+01, 2.2178e+00, \n 2DIAGNOSTIC,    22, -5.341281294823e-01, 1.195892536998e-06, 5.9792e+01, 1.8805e+00, \n 2DIAGNOSTIC,    23, -5.341262221336e-01, 1.140322069659e-06, 6.1690e+01, 1.8980e+00, \n 2DIAGNOSTIC,    24, -5.341259241104e-01, 1.102619080484e-06, 6.3567e+01, 1.8766e+00, \n 2DIAGNOSTIC,    25, -5.341266393661e-01, 1.016212081595e-06, 6.5475e+01, 1.9079e+00, \n 2DIAGNOSTIC,    26, -5.341253876686e-01, 1.029153054333e-06, 6.7039e+01, 1.5647e+00, \nDIAGNOSTIC,Iteration,metricValue,convergenceValue,ITERATION_TIME_INDEX,SINCE_LAST\n 2DIAGNOSTIC,     1, -4.902608096600e-01, inf, 8.4163e+01, 1.7124e+01, \n  Elapsed time (stage 1): 8.5100e+01\n\n\nStage 2\n  iterations = 100x70x50x0\n  convergence threshold = 1.0000e-06\n  convergence window size = 10\n  number of levels = 4\n  using the Mattes MI metric (number of bins = 32, weight = 1.0000e+00)\n  preprocessing:  winsorizing the image intensities\n  Shrink factors (level 1 out of 4): [8, 8, 8]\n  Shrink factors (level 2 out of 4): [4, 4, 4]\n  Shrink factors (level 3 out of 4): [2, 2, 2]\n  Shrink factors (level 4 out of 4): [1, 1, 1]\n  smoothing sigmas per level: [3, 2, 1, 0]\n  Using default NONE metricSamplingStrategy \n\n*** Running SyN registration (varianceForUpdateField = 3.0000e+00, varianceForTotalField = 0.0000e+00) ***\n\nXXDIAGNOSTIC,Iteration,metricValue,convergenceValue,ITERATION_TIME_INDEX,SINCE_LAST\n 1DIAGNOSTIC,     1, -4.273429512978e-01, inf, 4.3277e+00, 4.3277e+00, \n 1DIAGNOSTIC,     2, -4.359233975410e-01, inf, 4.6560e+00, 3.2821e-01, \n 1DIAGNOSTIC,     3, -4.409961104393e-01, inf, 4.9966e+00, 3.4069e-01, \n 1DIAGNOSTIC,     4, -4.424861669540e-01, inf, 5.3137e+00, 3.1703e-01, \n 1DIAGNOSTIC,     5, -4.419805109501e-01, inf, 5.6537e+00, 3.3999e-01, \n 1DIAGNOSTIC,     6, -4.410870671272e-01, inf, 5.9536e+00, 2.9995e-01, \n 1DIAGNOSTIC,     7, -4.397740364075e-01, inf, 6.2447e+00, 2.9105e-01, \n 1DIAGNOSTIC,     8, -4.392075538635e-01, inf, 6.5378e+00, 2.9314e-01, \n 1DIAGNOSTIC,     9, -4.384686350822e-01, inf, 6.8356e+00, 2.9776e-01, \n 1DIAGNOSTIC,    10, -4.377518296242e-01, 6.489151273854e-04, 7.1439e+00, 3.0834e-01, \n 1DIAGNOSTIC,    11, -4.366418719292e-01, -3.771774354391e-04, 7.4576e+00, 3.1368e-01, \nXXDIAGNOSTIC,Iteration,metricValue,convergenceValue,ITERATION_TIME_INDEX,SINCE_LAST\n 1DIAGNOSTIC,     1, -3.844579458237e-01, inf, 1.1087e+01, 3.6295e+00, \n 1DIAGNOSTIC,     2, -3.883841037750e-01, inf, 1.2243e+01, 1.1558e+00, \n 1DIAGNOSTIC,     3, -3.925099670887e-01, inf, 1.3289e+01, 1.0464e+00, \n 1DIAGNOSTIC,     4, -3.953040838242e-01, inf, 1.4346e+01, 1.0563e+00, \n 1DIAGNOSTIC,     5, -3.974834084511e-01, inf, 1.5383e+01, 1.0370e+00, \n 1DIAGNOSTIC,     6, -3.991155028343e-01, inf, 1.6430e+01, 1.0472e+00, \n 1DIAGNOSTIC,     7, -4.005221128464e-01, inf, 1.7470e+01, 1.0405e+00, \n 1DIAGNOSTIC,     8, -4.019547700882e-01, inf, 1.8510e+01, 1.0393e+00, \n 1DIAGNOSTIC,     9, -4.030693173409e-01, inf, 1.9604e+01, 1.0945e+00, \n 1DIAGNOSTIC,    10, -4.039027392864e-01, 2.984554972500e-03, 2.0703e+01, 1.0993e+00, \n 1DIAGNOSTIC,    11, -4.045920968056e-01, 2.209117636085e-03, 2.1815e+01, 1.1120e+00, \n 1DIAGNOSTIC,    12, -4.050109982491e-01, 1.621461124159e-03, 2.2914e+01, 1.0981e+00, \n 1DIAGNOSTIC,    13, -4.054720103741e-01, 1.228409819305e-03, 2.4011e+01, 1.0977e+00, \n 1DIAGNOSTIC,    14, -4.057950079441e-01, 9.374567889608e-04, 2.5122e+01, 1.1111e+00, \n 1DIAGNOSTIC,    15, -4.059761762619e-01, 7.113925530575e-04, 2.6230e+01, 1.1071e+00, \n 1DIAGNOSTIC,    16, -4.060583114624e-01, 5.244950298220e-04, 2.7345e+01, 1.1156e+00, \n 1DIAGNOSTIC,    17, -4.059043228626e-01, 3.633119631559e-04, 2.8434e+01, 1.0889e+00, \n 1DIAGNOSTIC,    18, -4.058211743832e-01, 2.395921910647e-04, 2.9543e+01, 1.1091e+00, \n 1DIAGNOSTIC,    19, -4.057791829109e-01, 1.465032109991e-04, 3.0692e+01, 1.1489e+00, \n 1DIAGNOSTIC,    20, -4.058072566986e-01, 7.940160867292e-05, 3.1760e+01, 1.0680e+00, \n 1DIAGNOSTIC,    21, -4.057141542435e-01, 3.144418951706e-05, 3.2869e+01, 1.1090e+00, \n 1DIAGNOSTIC,    22, -4.055896401405e-01, -5.475890247908e-06, 3.3927e+01, 1.0580e+00, \nXXDIAGNOSTIC,Iteration,metricValue,convergenceValue,ITERATION_TIME_INDEX,SINCE_LAST\n 1DIAGNOSTIC,     1, -3.526949882507e-01, inf, 4.4451e+01, 1.0524e+01, \n 1DIAGNOSTIC,     2, -3.546077311039e-01, inf, 5.1597e+01, 7.1458e+00, \n 1DIAGNOSTIC,     3, -3.565073907375e-01, inf, 5.8973e+01, 7.3766e+00, \n 1DIAGNOSTIC,     4, -3.582155108452e-01, inf, 6.6086e+01, 7.1130e+00, \n 1DIAGNOSTIC,     5, -3.595665395260e-01, inf, 7.3472e+01, 7.3862e+00, \n 1DIAGNOSTIC,     6, -3.608272671700e-01, inf, 8.0617e+01, 7.1449e+00, \n 1DIAGNOSTIC,     7, -3.617824614048e-01, inf, 8.7709e+01, 7.0918e+00, \n 1DIAGNOSTIC,     8, -3.626236319542e-01, inf, 9.4878e+01, 7.1694e+00, \n 1DIAGNOSTIC,     9, -3.633233606815e-01, inf, 1.0200e+02, 7.1166e+00, \n 1DIAGNOSTIC,    10, -3.639079034328e-01, 1.979713328183e-03, 1.0913e+02, 7.1319e+00, \n 1DIAGNOSTIC,    11, -3.644438982010e-01, 1.544574159198e-03, 1.1677e+02, 7.6388e+00, \n 1DIAGNOSTIC,    12, -3.650589585304e-01, 1.208581961691e-03, 1.2416e+02, 7.3940e+00, \n 1DIAGNOSTIC,    13, -3.654699921608e-01, 9.540520259179e-04, 1.3180e+02, 7.6430e+00, \n 1DIAGNOSTIC,    14, -3.658813238144e-01, 7.679268019274e-04, 1.3948e+02, 7.6790e+00, \n 1DIAGNOSTIC,    15, -3.661324679852e-01, 6.198990740813e-04, 1.4718e+02, 7.7002e+00, \n 1DIAGNOSTIC,    16, -3.663407564163e-01, 5.053913919255e-04, 1.5484e+02, 7.6541e+00, \n 1DIAGNOSTIC,    17, -3.664990067482e-01, 4.088704881724e-04, 1.6249e+02, 7.6587e+00, \n 1DIAGNOSTIC,    18, -3.666268289089e-01, 3.272924805060e-04, 1.7014e+02, 7.6480e+00, \n 1DIAGNOSTIC,    19, -3.667185902596e-01, 2.565818722360e-04, 1.7780e+02, 7.6550e+00, \n 1DIAGNOSTIC,    20, -3.667933642864e-01, 1.949313591467e-04, 1.8551e+02, 7.7109e+00, \n 1DIAGNOSTIC,    21, -3.668781518936e-01, 1.439931365894e-04, 1.9315e+02, 7.6370e+00, \n 1DIAGNOSTIC,    22, -3.669779002666e-01, 1.096328123822e-04, 2.0088e+02, 7.7330e+00, \n 1DIAGNOSTIC,    23, -3.670769929886e-01, 8.521799463779e-05, 2.0854e+02, 7.6580e+00, \n 1DIAGNOSTIC,    24, -3.671858906746e-01, 7.180295506259e-05, 2.1619e+02, 7.6550e+00, \n 1DIAGNOSTIC,    25, -3.673200011253e-01, 6.477162241936e-05, 2.2383e+02, 7.6410e+00, \n 1DIAGNOSTIC,    26, -3.674825429916e-01, 6.332613702398e-05, 2.3148e+02, 7.6459e+00, \n 1DIAGNOSTIC,    27, -3.676666617393e-01, 6.590162956854e-05, 2.3913e+02, 7.6510e+00, \n 1DIAGNOSTIC,    28, -3.678852617741e-01, 7.173853373388e-05, 2.4676e+02, 7.6330e+00, \n 1DIAGNOSTIC,    29, -3.680939674377e-01, 7.849233952584e-05, 2.5446e+02, 7.6940e+00, \n 1DIAGNOSTIC,    30, -3.683217167854e-01, 8.525812154403e-05, 2.6212e+02, 7.6639e+00, \n 1DIAGNOSTIC,    31, -3.685488104820e-01, 9.135324216913e-05, 2.6977e+02, 7.6530e+00, \n 1DIAGNOSTIC,    32, -3.687709271908e-01, 9.624426456867e-05, 2.7743e+02, 7.6520e+00, \n 1DIAGNOSTIC,    33, -3.689843416214e-01, 9.909043001244e-05, 2.8507e+02, 7.6470e+00, \n 1DIAGNOSTIC,    34, -3.691716194153e-01, 9.915267582983e-05, 2.9277e+02, 7.6970e+00, \n 1DIAGNOSTIC,    35, -3.693322539330e-01, 9.636116010370e-05, 3.0042e+02, 7.6473e+00, \n 1DIAGNOSTIC,    36, -3.694901466370e-01, 9.150281402981e-05, 3.0813e+02, 7.7090e+00, \n 1DIAGNOSTIC,    37, -3.696788549423e-01, 8.602526213508e-05, 3.1578e+02, 7.6577e+00, \n 1DIAGNOSTIC,    38, -3.698571324348e-01, 8.074194920482e-05, 3.2345e+02, 7.6680e+00, \n 1DIAGNOSTIC,    39, -3.700121641159e-01, 7.527353591286e-05, 3.3108e+02, 7.6320e+00, \n 1DIAGNOSTIC,    40, -3.702161908150e-01, 7.130543963285e-05, 3.3872e+02, 7.6390e+00, \n 1DIAGNOSTIC,    41, -3.704169094563e-01, 6.880647561047e-05, 3.4638e+02, 7.6553e+00, \n 1DIAGNOSTIC,    42, -3.706257641315e-01, 6.778700480936e-05, 3.5401e+02, 7.6377e+00, \n 1DIAGNOSTIC,    43, -3.708250522614e-01, 6.777056114515e-05, 3.6172e+02, 7.7061e+00, \n 1DIAGNOSTIC,    44, -3.710065186024e-01, 6.779293471482e-05, 3.6939e+02, 7.6647e+00, \n 1DIAGNOSTIC,    45, -3.711442351341e-01, 6.648752605543e-05, 3.7703e+02, 7.6451e+00, \n 1DIAGNOSTIC,    46, -3.713110089302e-01, 6.435346585931e-05, 3.8469e+02, 7.6553e+00, \n 1DIAGNOSTIC,    47, -3.714874386787e-01, 6.216122710612e-05, 3.9233e+02, 7.6468e+00, \n 1DIAGNOSTIC,    48, -3.716387152672e-01, 5.942908319412e-05, 4.0000e+02, 7.6718e+00, \n 1DIAGNOSTIC,    49, -3.717445731163e-01, 5.524821244762e-05, 4.0764e+02, 7.6320e+00, \n 1DIAGNOSTIC,    50, -3.718963265419e-01, 5.148959462531e-05, 4.1534e+02, 7.7039e+00, \n  Elapsed time (stage 2): 432.5\n\n\nTotal elapsed time: 601.6'
+250815-14:47:49,424 nipype.interface INFO:
+	 Processing cmd: CreateJacobianDeterminantImage 3 "/output_dir/nipype-1.8.0/sub-001/ses-1/anatomical_pipeline/parcellation_stage/parcThal/T1_Ind2temp1Warp.nii.gz" "/output_dir/nipype-1.8.0/sub-001/ses-1/anatomical_pipeline/parcellation_stage/parcThal/T1_class-thalamus_probtissue_jacobian.nii.gz" 
+250815-14:48:10,645 nipype.interface INFO:
+	 b''
+250815-14:48:10,647 nipype.interface INFO:
+	 Processing cmd: antsApplyTransforms --float -d 3 -e 3 -i "/opt/conda/envs/py37cmp-core/lib/python3.7/site-packages/cmtklib/data/segmentation/thalamus2018/Thalamus_Nuclei-HCP-4DSPAMs.nii.gz" -o "/output_dir/nipype-1.8.0/sub-001/ses-1/anatomical_pipeline/parcellation_stage/parcThal/T1_class-thalamus_probtissue.nii.gz" -r "/output_dir/nipype-1.8.0/sub-001/ses-1/anatomical_pipeline/parcellation_stage/Lausanne2018_parcellation/T1.nii.gz" -t "/output_dir/nipype-1.8.0/sub-001/ses-1/anatomical_pipeline/parcellation_stage/parcThal/T1_Ind2temp1Warp.nii.gz" -t "/output_dir/nipype-1.8.0/sub-001/ses-1/anatomical_pipeline/parcellation_stage/parcThal/T1_Ind2temp0GenericAffine.mat" -n BSpline[3]
+250815-14:49:55,647 nipype.interface INFO:
+	 b''
+250815-14:49:55,648 nipype.interface INFO:
+	 Correcting the volumes after the interpolation 
+Save output image to /output_dir/nipype-1.8.0/sub-001/ses-1/anatomical_pipeline/parcellation_stage/parcThal/T1_class-thalamus_dtissue_after_ants.nii.gz
+Save output image to /output_dir/nipype-1.8.0/sub-001/ses-1/anatomical_pipeline/parcellation_stage/parcThal/T1_class-thalamus_dtissue_after_jacobiancorr.nii.gz
+250815-14:50:38,342 nipype.interface INFO:
+	 Creating Thalamus mask from FreeSurfer aparc+aseg 
+250815-14:50:38,342 nipype.interface INFO:
+	 - New FreeSurfer SUBJECTS_DIR:
+  /output_dir/freesurfer-7.1.1
+
+Save output image to /output_dir/nipype-1.8.0/sub-001/ses-1/anatomical_pipeline/parcellation_stage/parcThal/T1_class-thalamus_dtissue.nii.gz
+Save output image to /output_dir/nipype-1.8.0/sub-001/ses-1/anatomical_pipeline/parcellation_stage/parcThal/T1_class-thalamus_probtissue.nii.gz
+Save output image to [[[0 0 0 ... 0 0 0]
+  [0 0 0 ... 0 0 0]
+  [0 0 0 ... 0 0 0]
+  ...
+  [0 0 0 ... 0 0 0]
+  [0 0 0 ... 0 0 0]
+  [0 0 0 ... 0 0 0]]
+
+ [[0 0 0 ... 0 0 0]
+  [0 0 0 ... 0 0 0]
+  [0 0 0 ... 0 0 0]
+  ...
+  [0 0 0 ... 0 0 0]
+  [0 0 0 ... 0 0 0]
+  [0 0 0 ... 0 0 0]]
+
+ [[0 0 0 ... 0 0 0]
+  [0 0 0 ... 0 0 0]
+  [0 0 0 ... 0 0 0]
+  ...
+  [0 0 0 ... 0 0 0]
+  [0 0 0 ... 0 0 0]
+  [0 0 0 ... 0 0 0]]
+
+ ...
+
+ [[0 0 0 ... 0 0 0]
+  [0 0 0 ... 0 0 0]
+  [0 0 0 ... 0 0 0]
+  ...
+  [0 0 0 ... 0 0 0]
+  [0 0 0 ... 0 0 0]
+  [0 0 0 ... 0 0 0]]
+
+ [[0 0 0 ... 0 0 0]
+  [0 0 0 ... 0 0 0]
+  [0 0 0 ... 0 0 0]
+  ...
+  [0 0 0 ... 0 0 0]
+  [0 0 0 ... 0 0 0]
+  [0 0 0 ... 0 0 0]]
+
+ [[0 0 0 ... 0 0 0]
+  [0 0 0 ... 0 0 0]
+  [0 0 0 ... 0 0 0]
+  ...
+  [0 0 0 ... 0 0 0]
+  [0 0 0 ... 0 0 0]
+  [0 0 0 ... 0 0 0]]]
+250815-14:51:02,777 nipype.interface INFO:
+	 Done
+250815-14:51:02,785 nipype.workflow INFO:
+	 [Node] Finished "parcThal", elapsed time 841.015428s.
+250815-14:51:04,352 nipype.workflow INFO:
+	 [Job 5] Completed (anatomical_pipeline.parcellation_stage.parcThal).
+250815-14:51:04,357 nipype.workflow INFO:
+	 [MultiProc] Running 0 tasks, and 1 jobs ready. Free memory (GB): 1360.44/1360.44, Free processors: 1/1.
+250815-14:51:04,544 nipype.workflow INFO:
+	 [Node] Setting-up "anatomical_pipeline.parcellation_stage.parcCombiner" in "/output_dir/nipype-1.8.0/sub-001/ses-1/anatomical_pipeline/parcellation_stage/parcCombiner".
+250815-14:51:04,649 nipype.workflow INFO:
+	 [Node] Executing "parcCombiner" <cmtklib.parcellation.CombineParcellations>
+250815-14:51:04,650 nipype.interface INFO:
+	 Start running CombineParcellations interface...
+Freesurfer subject directory: /output_dir/freesurfer-7.1.1/sub-001_ses-1
+Subfields image (Left hemisphere) not provided
+Subfields image (Right hemisphere) not provided
+Brain stem image not provided
+250815-14:51:04,743 nipype.interface INFO:
+	   > Create ventricule image
+250815-14:51:05,60 nipype.interface INFO:
+	     ... Image saved to /output_dir/nipype-1.8.0/sub-001/ses-1/anatomical_pipeline/parcellation_stage/parcCombiner/ventricle3.nii.gz
+250815-14:51:05,576 nipype.interface INFO:
+	   > Dilate (modal) the ventricule image
+250815-14:51:05,577 nipype.interface INFO:
+	     ... Command: fslmaths -dt char /output_dir/nipype-1.8.0/sub-001/ses-1/anatomical_pipeline/parcellation_stage/parcCombiner/ventricle3.nii.gz -mas /output_dir/nipype-1.8.0/sub-001/ses-1/anatomical_pipeline/parcellation_stage/parcCombiner/ventricle3.nii.gz -kernel sphere 5 -dilD /output_dir/nipype-1.8.0/sub-001/ses-1/anatomical_pipeline/parcellation_stage/parcCombiner/ventricle3_dil.nii.gz
+250815-14:51:06,353 nipype.workflow INFO:
+	 [MultiProc] Running 1 tasks, and 0 jobs ready. Free memory (GB): 1360.24/1360.44, Free processors: 0/1.
+                     Currently running:
+                       * anatomical_pipeline.parcellation_stage.parcCombiner
+create color look up table :  True
+Create colorLUT file as /output_dir/nipype-1.8.0/sub-001/ses-1/anatomical_pipeline/parcellation_stage/parcCombiner/ROIv_Lausanne2018_scale1_FreeSurferColorLUT.txt
+Create graphml_file as /output_dir/nipype-1.8.0/sub-001/ses-1/anatomical_pipeline/parcellation_stage/parcCombiner/ROIv_Lausanne2018_scale1.graphml
+Create colorLUT file as /output_dir/nipype-1.8.0/sub-001/ses-1/anatomical_pipeline/parcellation_stage/parcCombiner/ROIv_Lausanne2018_scale2_FreeSurferColorLUT.txt
+Create graphml_file as /output_dir/nipype-1.8.0/sub-001/ses-1/anatomical_pipeline/parcellation_stage/parcCombiner/ROIv_Lausanne2018_scale2.graphml
+Create colorLUT file as /output_dir/nipype-1.8.0/sub-001/ses-1/anatomical_pipeline/parcellation_stage/parcCombiner/ROIv_Lausanne2018_scale3_FreeSurferColorLUT.txt
+Create graphml_file as /output_dir/nipype-1.8.0/sub-001/ses-1/anatomical_pipeline/parcellation_stage/parcCombiner/ROIv_Lausanne2018_scale3.graphml
+Create colorLUT file as /output_dir/nipype-1.8.0/sub-001/ses-1/anatomical_pipeline/parcellation_stage/parcCombiner/ROIv_Lausanne2018_scale4_FreeSurferColorLUT.txt
+Create graphml_file as /output_dir/nipype-1.8.0/sub-001/ses-1/anatomical_pipeline/parcellation_stage/parcCombiner/ROIv_Lausanne2018_scale4.graphml
+Create colorLUT file as /output_dir/nipype-1.8.0/sub-001/ses-1/anatomical_pipeline/parcellation_stage/parcCombiner/ROIv_Lausanne2018_scale5_FreeSurferColorLUT.txt
+Create graphml_file as /output_dir/nipype-1.8.0/sub-001/ses-1/anatomical_pipeline/parcellation_stage/parcCombiner/ROIv_Lausanne2018_scale5.graphml
+250815-14:56:56,971 nipype.interface INFO:
+	   > Create colorLUT file as /output_dir/nipype-1.8.0/sub-001/ses-1/anatomical_pipeline/parcellation_stage/parcCombiner/ROIv_Lausanne2018_scale1_FreeSurferColorLUT.txt
+250815-14:56:56,983 nipype.interface INFO:
+	   > Create graphml_file as /output_dir/nipype-1.8.0/sub-001/ses-1/anatomical_pipeline/parcellation_stage/parcCombiner/ROIv_Lausanne2018_scale1.graphml
+250815-14:56:57,503 nipype.interface INFO:
+	   > Load rh.lausanne2018.scale1.annot
+250815-14:57:00,550 nipype.interface INFO:
+	   > Load lh.lausanne2018.scale1.annot
+250815-14:57:03,360 nipype.interface INFO:
+	   > Save output image to /output_dir/nipype-1.8.0/sub-001/ses-1/anatomical_pipeline/parcellation_stage/parcCombiner/ROIv_Lausanne2018_scale1_final.nii.gz
+250815-14:57:03,732 nipype.interface INFO:
+	   > Create colorLUT file as /output_dir/nipype-1.8.0/sub-001/ses-1/anatomical_pipeline/parcellation_stage/parcCombiner/ROIv_Lausanne2018_scale2_FreeSurferColorLUT.txt
+250815-14:57:03,732 nipype.interface INFO:
+	   > Create graphml_file as /output_dir/nipype-1.8.0/sub-001/ses-1/anatomical_pipeline/parcellation_stage/parcCombiner/ROIv_Lausanne2018_scale2.graphml
+250815-14:57:04,264 nipype.interface INFO:
+	   > Load rh.lausanne2018.scale2.annot
+250815-14:57:07,370 nipype.interface INFO:
+	   > Load lh.lausanne2018.scale2.annot
+250815-14:57:10,89 nipype.interface INFO:
+	   > Save output image to /output_dir/nipype-1.8.0/sub-001/ses-1/anatomical_pipeline/parcellation_stage/parcCombiner/ROIv_Lausanne2018_scale2_final.nii.gz
+250815-14:57:10,488 nipype.interface INFO:
+	   > Create colorLUT file as /output_dir/nipype-1.8.0/sub-001/ses-1/anatomical_pipeline/parcellation_stage/parcCombiner/ROIv_Lausanne2018_scale3_FreeSurferColorLUT.txt
+250815-14:57:10,499 nipype.interface INFO:
+	   > Create graphml_file as /output_dir/nipype-1.8.0/sub-001/ses-1/anatomical_pipeline/parcellation_stage/parcCombiner/ROIv_Lausanne2018_scale3.graphml
+250815-14:57:11,14 nipype.interface INFO:
+	   > Load rh.lausanne2018.scale3.annot
+250815-14:57:13,914 nipype.interface INFO:
+	   > Load lh.lausanne2018.scale3.annot
+250815-14:57:16,633 nipype.interface INFO:
+	   > Save output image to /output_dir/nipype-1.8.0/sub-001/ses-1/anatomical_pipeline/parcellation_stage/parcCombiner/ROIv_Lausanne2018_scale3_final.nii.gz
+250815-14:57:17,16 nipype.interface INFO:
+	   > Create colorLUT file as /output_dir/nipype-1.8.0/sub-001/ses-1/anatomical_pipeline/parcellation_stage/parcCombiner/ROIv_Lausanne2018_scale4_FreeSurferColorLUT.txt
+250815-14:57:17,17 nipype.interface INFO:
+	   > Create graphml_file as /output_dir/nipype-1.8.0/sub-001/ses-1/anatomical_pipeline/parcellation_stage/parcCombiner/ROIv_Lausanne2018_scale4.graphml
+250815-14:57:17,491 nipype.interface INFO:
+	   > Load rh.lausanne2018.scale4.annot
+250815-14:57:20,555 nipype.interface INFO:
+	   > Load lh.lausanne2018.scale4.annot
+250815-14:57:23,338 nipype.interface INFO:
+	   > Save output image to /output_dir/nipype-1.8.0/sub-001/ses-1/anatomical_pipeline/parcellation_stage/parcCombiner/ROIv_Lausanne2018_scale4_final.nii.gz
+250815-14:57:23,709 nipype.interface INFO:
+	   > Create colorLUT file as /output_dir/nipype-1.8.0/sub-001/ses-1/anatomical_pipeline/parcellation_stage/parcCombiner/ROIv_Lausanne2018_scale5_FreeSurferColorLUT.txt
+250815-14:57:23,710 nipype.interface INFO:
+	   > Create graphml_file as /output_dir/nipype-1.8.0/sub-001/ses-1/anatomical_pipeline/parcellation_stage/parcCombiner/ROIv_Lausanne2018_scale5.graphml
+250815-14:57:24,232 nipype.interface INFO:
+	   > Load rh.lausanne2018.scale5.annot
+250815-14:57:27,639 nipype.interface INFO:
+	   > Load lh.lausanne2018.scale5.annot
+250815-14:57:30,894 nipype.interface INFO:
+	   > Save output image to /output_dir/nipype-1.8.0/sub-001/ses-1/anatomical_pipeline/parcellation_stage/parcCombiner/ROIv_Lausanne2018_scale5_final.nii.gz
+250815-14:57:31,321 nipype.interface INFO:
+	     ... Copy aparc+aseg to /output_dir/freesurfer-7.1.1/sub-001_ses-1/tmp/aparc+aseg.mgz
+250815-14:57:31,340 nipype.interface INFO:
+	     ... Transform to native space
+250815-14:57:31,340 nipype.interface INFO:
+	         Command: mri_vol2vol --mov "/output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/aparc+aseg.mgz" --targ "/output_dir/freesurfer-7.1.1/sub-001_ses-1/mri/rawavg.mgz" --regheader --o "/output_dir/freesurfer-7.1.1/sub-001_ses-1/tmp/aparc+aseg.native.nii.gz" --no-save-reg --interp nearest
+250815-14:57:34,17 nipype.interface INFO:
+	   > Correct and save Freesurfer-generated aparc+aseg.mgz in native space...
+250815-14:57:35,921 nipype.interface INFO:
+	     ... Save tmp image to /output_dir/freesurfer-7.1.1/sub-001_ses-1/tmp/aparc-thal.lh.native.nii.gz
+250815-14:57:38,53 nipype.interface INFO:
+	     ... Save tmp image to /output_dir/freesurfer-7.1.1/sub-001_ses-1/tmp/aparc-thal.rh.native.nii.gz
+250815-14:57:38,707 nipype.interface INFO:
+	     ... Save relabeled image to /output_dir/freesurfer-7.1.1/sub-001_ses-1/tmp/aparc+aseg.Lausanne2018.native.nii.gz
+250815-14:57:39,94 nipype.workflow INFO:
+	 [Node] Finished "parcCombiner", elapsed time 394.444172s.
+250815-14:57:40,747 nipype.workflow INFO:
+	 [Job 6] Completed (anatomical_pipeline.parcellation_stage.parcCombiner).
+250815-14:57:40,749 nipype.workflow INFO:
+	 [MultiProc] Running 0 tasks, and 2 jobs ready. Free memory (GB): 1360.44/1360.44, Free processors: 1/1.
+250815-14:57:40,897 nipype.workflow INFO:
+	 [Node] Setting-up "anatomical_pipeline.parcellation_stage.compute_roi_volumetry" in "/output_dir/nipype-1.8.0/sub-001/ses-1/anatomical_pipeline/parcellation_stage/compute_roi_volumetry".
+250815-14:57:40,903 nipype.workflow INFO:
+	 [Node] Executing "compute_roi_volumetry" <cmtklib.parcellation.ComputeParcellationRoiVolumes>
+250815-14:57:40,903 nipype.interface INFO:
+	 -------------------------------------------------------
+250815-14:57:40,903 nipype.interface INFO:
+	 Processing Lausanne2018 parcellation - scale1
+250815-14:57:40,904 nipype.interface INFO:
+	 -------------------------------------------------------
+250815-14:57:40,904 nipype.interface INFO:
+	   > Load /output_dir/nipype-1.8.0/sub-001/ses-1/anatomical_pipeline/parcellation_stage/parcCombiner/ROIv_Lausanne2018_scale1_final.nii.gz...
+250815-14:57:41,28 nipype.interface INFO:
+	     ... Voxel volume = 1.0 mm3
+250815-14:57:41,37 nipype.interface INFO:
+	   > Create Volumetry TSV file as /output_dir/nipype-1.8.0/sub-001/ses-1/anatomical_pipeline/parcellation_stage/compute_roi_volumetry/scale1_roi_stats.tsv
+250815-14:57:41,37 nipype.interface INFO:
+	   > Load /output_dir/nipype-1.8.0/sub-001/ses-1/anatomical_pipeline/parcellation_stage/parcCombiner/ROIv_Lausanne2018_scale1.graphml...
+250815-14:57:41,40 nipype.interface INFO:
+	   > Processing parcels...
+250815-14:57:41,41 nipype.interface INFO:
+	    0%
+250815-14:57:41,308 nipype.interface INFO:
+	   10%
+250815-14:57:41,579 nipype.interface INFO:
+	   20%
+250815-14:57:41,850 nipype.interface INFO:
+	   30%
+250815-14:57:42,118 nipype.interface INFO:
+	   40%
+250815-14:57:42,610 nipype.interface INFO:
+	   60%
+250815-14:57:42,748 nipype.workflow INFO:
+	 [MultiProc] Running 1 tasks, and 5 jobs ready. Free memory (GB): 1360.24/1360.44, Free processors: 0/1.
+                     Currently running:
+                       * anatomical_pipeline.parcellation_stage.compute_roi_volumetry
+250815-14:57:42,896 nipype.interface INFO:
+	   70%
+250815-14:57:43,156 nipype.interface INFO:
+	   80%
+250815-14:57:43,410 nipype.interface INFO:
+	   90%
+250815-14:57:43,692 nipype.interface INFO:
+	 -------------------------------------------------------
+250815-14:57:43,693 nipype.interface INFO:
+	 Processing Lausanne2018 parcellation - scale2
+250815-14:57:43,693 nipype.interface INFO:
+	 -------------------------------------------------------
+250815-14:57:43,693 nipype.interface INFO:
+	   > Load /output_dir/nipype-1.8.0/sub-001/ses-1/anatomical_pipeline/parcellation_stage/parcCombiner/ROIv_Lausanne2018_scale2_final.nii.gz...
+250815-14:57:43,804 nipype.interface INFO:
+	     ... Voxel volume = 1.0 mm3
+250815-14:57:43,817 nipype.interface INFO:
+	   > Create Volumetry TSV file as /output_dir/nipype-1.8.0/sub-001/ses-1/anatomical_pipeline/parcellation_stage/compute_roi_volumetry/scale2_roi_stats.tsv
+250815-14:57:43,817 nipype.interface INFO:
+	   > Load /output_dir/nipype-1.8.0/sub-001/ses-1/anatomical_pipeline/parcellation_stage/parcCombiner/ROIv_Lausanne2018_scale2.graphml...
+250815-14:57:43,820 nipype.interface INFO:
+	   > Processing parcels...
+250815-14:57:43,820 nipype.interface INFO:
+	    0%
+250815-14:57:44,198 nipype.interface INFO:
+	   10%
+250815-14:57:44,586 nipype.interface INFO:
+	   20%
+250815-14:57:44,973 nipype.interface INFO:
+	   30%
+250815-14:57:45,360 nipype.interface INFO:
+	   40%
+250815-14:57:45,736 nipype.interface INFO:
+	   50%
+250815-14:57:46,136 nipype.interface INFO:
+	   60%
+250815-14:57:46,511 nipype.interface INFO:
+	   70%
+250815-14:57:46,912 nipype.interface INFO:
+	   80%
+250815-14:57:47,281 nipype.interface INFO:
+	   90%
+250815-14:57:47,693 nipype.interface INFO:
+	 -------------------------------------------------------
+250815-14:57:47,693 nipype.interface INFO:
+	 Processing Lausanne2018 parcellation - scale3
+250815-14:57:47,694 nipype.interface INFO:
+	 -------------------------------------------------------
+250815-14:57:47,694 nipype.interface INFO:
+	   > Load /output_dir/nipype-1.8.0/sub-001/ses-1/anatomical_pipeline/parcellation_stage/parcCombiner/ROIv_Lausanne2018_scale3_final.nii.gz...
+250815-14:57:47,792 nipype.interface INFO:
+	     ... Voxel volume = 1.0 mm3
+250815-14:57:47,815 nipype.interface INFO:
+	   > Create Volumetry TSV file as /output_dir/nipype-1.8.0/sub-001/ses-1/anatomical_pipeline/parcellation_stage/compute_roi_volumetry/scale3_roi_stats.tsv
+250815-14:57:47,815 nipype.interface INFO:
+	   > Load /output_dir/nipype-1.8.0/sub-001/ses-1/anatomical_pipeline/parcellation_stage/parcCombiner/ROIv_Lausanne2018_scale3.graphml...
+250815-14:57:47,819 nipype.interface INFO:
+	   > Processing parcels...
+250815-14:57:47,819 nipype.interface INFO:
+	    0%
+250815-14:57:48,458 nipype.interface INFO:
+	   10%
+250815-14:57:49,118 nipype.interface INFO:
+	   20%
+250815-14:57:49,763 nipype.interface INFO:
+	   30%
+250815-14:57:50,437 nipype.interface INFO:
+	   40%
+250815-14:57:51,107 nipype.interface INFO:
+	   50%
+250815-14:57:51,744 nipype.interface INFO:
+	   60%
+250815-14:57:52,455 nipype.interface INFO:
+	   70%
+250815-14:57:53,150 nipype.interface INFO:
+	   80%
+250815-14:57:53,860 nipype.interface INFO:
+	   90%
+250815-14:57:54,496 nipype.interface INFO:
+	  100%
+250815-14:57:54,536 nipype.interface INFO:
+	 -------------------------------------------------------
+250815-14:57:54,536 nipype.interface INFO:
+	 Processing Lausanne2018 parcellation - scale4
+250815-14:57:54,536 nipype.interface INFO:
+	 -------------------------------------------------------
+250815-14:57:54,537 nipype.interface INFO:
+	   > Load /output_dir/nipype-1.8.0/sub-001/ses-1/anatomical_pipeline/parcellation_stage/parcCombiner/ROIv_Lausanne2018_scale4_final.nii.gz...
+250815-14:57:54,649 nipype.interface INFO:
+	     ... Voxel volume = 1.0 mm3
+250815-14:57:54,662 nipype.interface INFO:
+	   > Create Volumetry TSV file as /output_dir/nipype-1.8.0/sub-001/ses-1/anatomical_pipeline/parcellation_stage/compute_roi_volumetry/scale4_roi_stats.tsv
+250815-14:57:54,662 nipype.interface INFO:
+	   > Load /output_dir/nipype-1.8.0/sub-001/ses-1/anatomical_pipeline/parcellation_stage/parcCombiner/ROIv_Lausanne2018_scale4.graphml...
+250815-14:57:54,669 nipype.interface INFO:
+	   > Processing parcels...
+250815-14:57:54,680 nipype.interface INFO:
+	    0%
+250815-14:57:55,921 nipype.interface INFO:
+	   10%
+250815-14:57:57,256 nipype.interface INFO:
+	   20%
+250815-14:57:58,552 nipype.interface INFO:
+	   30%
+250815-14:57:59,890 nipype.interface INFO:
+	   40%
+250815-14:58:01,224 nipype.interface INFO:
+	   50%
+250815-14:58:02,542 nipype.interface INFO:
+	   60%
+250815-14:58:03,814 nipype.interface INFO:
+	   70%
+250815-14:58:05,113 nipype.interface INFO:
+	   80%
+250815-14:58:06,398 nipype.interface INFO:
+	   90%
+250815-14:58:07,700 nipype.interface INFO:
+	  100%
+250815-14:58:07,753 nipype.interface INFO:
+	 -------------------------------------------------------
+250815-14:58:07,754 nipype.interface INFO:
+	 Processing Lausanne2018 parcellation - scale5
+250815-14:58:07,754 nipype.interface INFO:
+	 -------------------------------------------------------
+250815-14:58:07,754 nipype.interface INFO:
+	   > Load /output_dir/nipype-1.8.0/sub-001/ses-1/anatomical_pipeline/parcellation_stage/parcCombiner/ROIv_Lausanne2018_scale5_final.nii.gz...
+250815-14:58:07,866 nipype.interface INFO:
+	     ... Voxel volume = 1.0 mm3
+250815-14:58:07,879 nipype.interface INFO:
+	   > Create Volumetry TSV file as /output_dir/nipype-1.8.0/sub-001/ses-1/anatomical_pipeline/parcellation_stage/compute_roi_volumetry/scale5_roi_stats.tsv
+250815-14:58:07,879 nipype.interface INFO:
+	   > Load /output_dir/nipype-1.8.0/sub-001/ses-1/anatomical_pipeline/parcellation_stage/parcCombiner/ROIv_Lausanne2018_scale5.graphml...
+250815-14:58:07,895 nipype.interface INFO:
+	   > Processing parcels...
+250815-14:58:07,908 nipype.interface INFO:
+	    0%
+250815-14:58:10,566 nipype.interface INFO:
+	   10%
+250815-14:58:13,342 nipype.interface INFO:
+	   20%
+250815-14:58:16,119 nipype.interface INFO:
+	   30%
+250815-14:58:18,921 nipype.interface INFO:
+	   40%
+250815-14:58:21,684 nipype.interface INFO:
+	   50%
+250815-14:58:24,500 nipype.interface INFO:
+	   60%
+250815-14:58:27,367 nipype.interface INFO:
+	   70%
+250815-14:58:30,130 nipype.interface INFO:
+	   80%
+250815-14:58:32,843 nipype.interface INFO:
+	   90%
+250815-14:58:35,559 nipype.interface INFO:
+	  100%
+250815-14:58:35,714 nipype.interface INFO:
+	   [Done]
+250815-14:58:35,715 nipype.workflow INFO:
+	 [Node] Finished "compute_roi_volumetry", elapsed time 54.811432s.
+250815-14:58:36,802 nipype.workflow INFO:
+	 [Job 7] Completed (anatomical_pipeline.parcellation_stage.compute_roi_volumetry).
+250815-14:58:36,803 nipype.workflow INFO:
+	 [MultiProc] Running 0 tasks, and 5 jobs ready. Free memory (GB): 1360.44/1360.44, Free processors: 1/1.
+250815-14:58:36,961 nipype.workflow INFO:
+	 [Node] Setting-up "_createBIDSLabelIndexMappingFile0" in "/output_dir/nipype-1.8.0/sub-001/ses-1/anatomical_pipeline/parcellation_stage/createBIDSLabelIndexMappingFile/mapflow/_createBIDSLabelIndexMappingFile0".
+250815-14:58:36,963 nipype.workflow INFO:
+	 [Node] Executing "_createBIDSLabelIndexMappingFile0" <cmtklib.bids.utils.CreateBIDSStandardParcellationLabelIndexMappingFile>
+		 > Save TSV file to ROIv_Lausanne2018_scale1.tsv...
+250815-14:58:36,969 nipype.workflow INFO:
+	 [Node] Finished "_createBIDSLabelIndexMappingFile0", elapsed time 0.004433s.
+250815-14:58:38,803 nipype.workflow INFO:
+	 [Job 10] Completed (_createBIDSLabelIndexMappingFile0).
+250815-14:58:38,804 nipype.workflow INFO:
+	 [MultiProc] Running 0 tasks, and 4 jobs ready. Free memory (GB): 1360.44/1360.44, Free processors: 1/1.
+250815-14:58:38,964 nipype.workflow INFO:
+	 [Node] Setting-up "_createBIDSLabelIndexMappingFile1" in "/output_dir/nipype-1.8.0/sub-001/ses-1/anatomical_pipeline/parcellation_stage/createBIDSLabelIndexMappingFile/mapflow/_createBIDSLabelIndexMappingFile1".
+250815-14:58:38,966 nipype.workflow INFO:
+	 [Node] Executing "_createBIDSLabelIndexMappingFile1" <cmtklib.bids.utils.CreateBIDSStandardParcellationLabelIndexMappingFile>
+		 > Save TSV file to ROIv_Lausanne2018_scale2.tsv...
+250815-14:58:38,973 nipype.workflow INFO:
+	 [Node] Finished "_createBIDSLabelIndexMappingFile1", elapsed time 0.005695s.
+250815-14:58:40,804 nipype.workflow INFO:
+	 [Job 11] Completed (_createBIDSLabelIndexMappingFile1).
+250815-14:58:40,805 nipype.workflow INFO:
+	 [MultiProc] Running 0 tasks, and 3 jobs ready. Free memory (GB): 1360.44/1360.44, Free processors: 1/1.
+250815-14:58:40,966 nipype.workflow INFO:
+	 [Node] Setting-up "_createBIDSLabelIndexMappingFile2" in "/output_dir/nipype-1.8.0/sub-001/ses-1/anatomical_pipeline/parcellation_stage/createBIDSLabelIndexMappingFile/mapflow/_createBIDSLabelIndexMappingFile2".
+250815-14:58:40,968 nipype.workflow INFO:
+	 [Node] Executing "_createBIDSLabelIndexMappingFile2" <cmtklib.bids.utils.CreateBIDSStandardParcellationLabelIndexMappingFile>
+		 > Save TSV file to ROIv_Lausanne2018_scale3.tsv...
+250815-14:58:40,984 nipype.workflow INFO:
+	 [Node] Finished "_createBIDSLabelIndexMappingFile2", elapsed time 0.01602s.
+250815-14:58:42,805 nipype.workflow INFO:
+	 [Job 12] Completed (_createBIDSLabelIndexMappingFile2).
+250815-14:58:42,806 nipype.workflow INFO:
+	 [MultiProc] Running 0 tasks, and 2 jobs ready. Free memory (GB): 1360.44/1360.44, Free processors: 1/1.
+250815-14:58:42,969 nipype.workflow INFO:
+	 [Node] Setting-up "_createBIDSLabelIndexMappingFile3" in "/output_dir/nipype-1.8.0/sub-001/ses-1/anatomical_pipeline/parcellation_stage/createBIDSLabelIndexMappingFile/mapflow/_createBIDSLabelIndexMappingFile3".
+250815-14:58:42,971 nipype.workflow INFO:
+	 [Node] Executing "_createBIDSLabelIndexMappingFile3" <cmtklib.bids.utils.CreateBIDSStandardParcellationLabelIndexMappingFile>
+		 > Save TSV file to ROIv_Lausanne2018_scale4.tsv...
+250815-14:58:43,11 nipype.workflow INFO:
+	 [Node] Finished "_createBIDSLabelIndexMappingFile3", elapsed time 0.039111s.
+250815-14:58:44,806 nipype.workflow INFO:
+	 [Job 13] Completed (_createBIDSLabelIndexMappingFile3).
+250815-14:58:44,808 nipype.workflow INFO:
+	 [MultiProc] Running 0 tasks, and 1 jobs ready. Free memory (GB): 1360.44/1360.44, Free processors: 1/1.
+250815-14:58:44,974 nipype.workflow INFO:
+	 [Node] Setting-up "_createBIDSLabelIndexMappingFile4" in "/output_dir/nipype-1.8.0/sub-001/ses-1/anatomical_pipeline/parcellation_stage/createBIDSLabelIndexMappingFile/mapflow/_createBIDSLabelIndexMappingFile4".
+250815-14:58:44,976 nipype.workflow INFO:
+	 [Node] Executing "_createBIDSLabelIndexMappingFile4" <cmtklib.bids.utils.CreateBIDSStandardParcellationLabelIndexMappingFile>
+		 > Save TSV file to ROIv_Lausanne2018_scale5.tsv...
+250815-14:58:45,62 nipype.workflow INFO:
+	 [Node] Finished "_createBIDSLabelIndexMappingFile4", elapsed time 0.085144s.
+250815-14:58:46,807 nipype.workflow INFO:
+	 [Job 14] Completed (_createBIDSLabelIndexMappingFile4).
+250815-14:58:46,808 nipype.workflow INFO:
+	 [MultiProc] Running 0 tasks, and 1 jobs ready. Free memory (GB): 1360.44/1360.44, Free processors: 1/1.
+250815-14:58:46,982 nipype.workflow INFO:
+	 [Node] Setting-up "_createBIDSLabelIndexMappingFile0" in "/output_dir/nipype-1.8.0/sub-001/ses-1/anatomical_pipeline/parcellation_stage/createBIDSLabelIndexMappingFile/mapflow/_createBIDSLabelIndexMappingFile0".
+250815-14:58:46,983 nipype.workflow INFO:
+	 [Node] Cached "_createBIDSLabelIndexMappingFile0" - collecting precomputed outputs
+250815-14:58:46,984 nipype.workflow INFO:
+	 [Node] "_createBIDSLabelIndexMappingFile0" found cached.
+250815-14:58:46,984 nipype.workflow INFO:
+	 [Node] Setting-up "_createBIDSLabelIndexMappingFile1" in "/output_dir/nipype-1.8.0/sub-001/ses-1/anatomical_pipeline/parcellation_stage/createBIDSLabelIndexMappingFile/mapflow/_createBIDSLabelIndexMappingFile1".
+250815-14:58:46,985 nipype.workflow INFO:
+	 [Node] Cached "_createBIDSLabelIndexMappingFile1" - collecting precomputed outputs
+250815-14:58:46,985 nipype.workflow INFO:
+	 [Node] "_createBIDSLabelIndexMappingFile1" found cached.
+250815-14:58:46,986 nipype.workflow INFO:
+	 [Node] Setting-up "_createBIDSLabelIndexMappingFile2" in "/output_dir/nipype-1.8.0/sub-001/ses-1/anatomical_pipeline/parcellation_stage/createBIDSLabelIndexMappingFile/mapflow/_createBIDSLabelIndexMappingFile2".
+250815-14:58:46,986 nipype.workflow INFO:
+	 [Node] Cached "_createBIDSLabelIndexMappingFile2" - collecting precomputed outputs
+250815-14:58:46,987 nipype.workflow INFO:
+	 [Node] "_createBIDSLabelIndexMappingFile2" found cached.
+250815-14:58:46,987 nipype.workflow INFO:
+	 [Node] Setting-up "_createBIDSLabelIndexMappingFile3" in "/output_dir/nipype-1.8.0/sub-001/ses-1/anatomical_pipeline/parcellation_stage/createBIDSLabelIndexMappingFile/mapflow/_createBIDSLabelIndexMappingFile3".
+250815-14:58:46,988 nipype.workflow INFO:
+	 [Node] Cached "_createBIDSLabelIndexMappingFile3" - collecting precomputed outputs
+250815-14:58:46,988 nipype.workflow INFO:
+	 [Node] "_createBIDSLabelIndexMappingFile3" found cached.
+250815-14:58:46,989 nipype.workflow INFO:
+	 [Node] Setting-up "_createBIDSLabelIndexMappingFile4" in "/output_dir/nipype-1.8.0/sub-001/ses-1/anatomical_pipeline/parcellation_stage/createBIDSLabelIndexMappingFile/mapflow/_createBIDSLabelIndexMappingFile4".
+250815-14:58:46,989 nipype.workflow INFO:
+	 [Node] Cached "_createBIDSLabelIndexMappingFile4" - collecting precomputed outputs
+250815-14:58:46,989 nipype.workflow INFO:
+	 [Node] "_createBIDSLabelIndexMappingFile4" found cached.
+250815-14:58:48,808 nipype.workflow INFO:
+	 [Job 8] Completed (anatomical_pipeline.parcellation_stage.createBIDSLabelIndexMappingFile).
+250815-14:58:48,809 nipype.workflow INFO:
+	 [MultiProc] Running 0 tasks, and 1 jobs ready. Free memory (GB): 1360.44/1360.44, Free processors: 1/1.
+250815-14:58:48,977 nipype.workflow INFO:
+	 [Node] Setting-up "anatomical_pipeline.anat_datasinker" in "/output_dir/nipype-1.8.0/sub-001/ses-1/anatomical_pipeline/anat_datasinker".
+250815-14:58:48,992 nipype.workflow INFO:
+	 [Node] Executing "anat_datasinker" <nipype.interfaces.io.DataSink>
+250815-14:58:48,993 nipype.interface INFO:
+	 sub: /output_dir/cmp-v3.1.0/sub-001/ses-1/anat/T1.nii.gz -> /output_dir/cmp-v3.1.0/sub-001/ses-1/anat/sub-001_ses-1_desc-head_T1w.nii.gz
+250815-14:58:48,995 nipype.interface INFO:
+	 sub: /output_dir/cmp-v3.1.0/sub-001/ses-1/anat/aseg.nii.gz -> /output_dir/cmp-v3.1.0/sub-001/ses-1/anat/sub-001_ses-1_desc-aseg_dseg.nii.gz
+250815-14:58:48,996 nipype.interface INFO:
+	 sub: /output_dir/cmp-v3.1.0/sub-001/ses-1/anat/brain.nii.gz -> /output_dir/cmp-v3.1.0/sub-001/ses-1/anat/sub-001_ses-1_desc-brain_T1w.nii.gz
+250815-14:58:48,996 nipype.interface INFO:
+	 sub: /output_dir/cmp-v3.1.0/sub-001/ses-1/anat/brain_mask.nii.gz -> /output_dir/cmp-v3.1.0/sub-001/ses-1/anat/sub-001_ses-1_desc-brain_mask.nii.gz
+250815-14:58:48,997 nipype.interface INFO:
+	 sub: /output_dir/cmp-v3.1.0/sub-001/ses-1/anat/fsmask_1mm.nii.gz -> /output_dir/cmp-v3.1.0/sub-001/ses-1/anat/sub-001_ses-1_label-WM_dseg.nii.gz
+250815-14:58:48,997 nipype.interface INFO:
+	 sub: /output_dir/cmp-v3.1.0/sub-001/ses-1/anat/T1w_class-GM.nii.gz -> /output_dir/cmp-v3.1.0/sub-001/ses-1/anat/sub-001_ses-1_label-GM_dseg.nii.gz
+250815-14:58:48,998 nipype.interface INFO:
+	 sub: /output_dir/cmp-v3.1.0/sub-001/ses-1/anat/csf_mask.nii.gz -> /output_dir/cmp-v3.1.0/sub-001/ses-1/anat/sub-001_ses-1_label-CSF_dseg.nii.gz
+250815-14:58:48,998 nipype.interface INFO:
+	 sub: /output_dir/cmp-v3.1.0/sub-001/ses-1/anat/brain_eroded.nii.gz -> /output_dir/cmp-v3.1.0/sub-001/ses-1/anat/sub-001_ses-1_label-brain_desc-eroded_dseg.nii.gz
+250815-14:58:48,998 nipype.interface INFO:
+	 sub: /output_dir/cmp-v3.1.0/sub-001/ses-1/anat/wm_eroded.nii.gz -> /output_dir/cmp-v3.1.0/sub-001/ses-1/anat/sub-001_ses-1_label-WM_desc-eroded_dseg.nii.gz
+250815-14:58:48,999 nipype.interface INFO:
+	 sub: /output_dir/cmp-v3.1.0/sub-001/ses-1/anat/csf_eroded.nii.gz -> /output_dir/cmp-v3.1.0/sub-001/ses-1/anat/sub-001_ses-1_label-CSF_desc-eroded_dseg.nii.gz
+250815-14:58:48,999 nipype.interface INFO:
+	 sub: /output_dir/cmp-v3.1.0/sub-001/ses-1/anat/aparc+aseg.Lausanne2018.native.nii.gz -> /output_dir/cmp-v3.1.0/sub-001/ses-1/anat/sub-001_ses-1_desc-aparcaseg_dseg.nii.gz
+250815-14:58:48,999 nipype.interface INFO:
+	 sub: /output_dir/cmp-v3.1.0/sub-001/ses-1/anat/ROIv_Lausanne2018_scale1_final.nii.gz -> /output_dir/cmp-v3.1.0/sub-001/ses-1/anat/sub-001_ses-1_atlas-L2018_res-scale1_dseg.nii.gz
+250815-14:58:49,0 nipype.interface INFO:
+	 sub: /output_dir/cmp-v3.1.0/sub-001/ses-1/anat/ROIv_Lausanne2018_scale2_final.nii.gz -> /output_dir/cmp-v3.1.0/sub-001/ses-1/anat/sub-001_ses-1_atlas-L2018_res-scale2_dseg.nii.gz
+250815-14:58:49,0 nipype.interface INFO:
+	 sub: /output_dir/cmp-v3.1.0/sub-001/ses-1/anat/ROIv_Lausanne2018_scale3_final.nii.gz -> /output_dir/cmp-v3.1.0/sub-001/ses-1/anat/sub-001_ses-1_atlas-L2018_res-scale3_dseg.nii.gz
+250815-14:58:49,0 nipype.interface INFO:
+	 sub: /output_dir/cmp-v3.1.0/sub-001/ses-1/anat/ROIv_Lausanne2018_scale4_final.nii.gz -> /output_dir/cmp-v3.1.0/sub-001/ses-1/anat/sub-001_ses-1_atlas-L2018_res-scale4_dseg.nii.gz
+250815-14:58:49,1 nipype.interface INFO:
+	 sub: /output_dir/cmp-v3.1.0/sub-001/ses-1/anat/ROIv_Lausanne2018_scale5_final.nii.gz -> /output_dir/cmp-v3.1.0/sub-001/ses-1/anat/sub-001_ses-1_atlas-L2018_res-scale5_dseg.nii.gz
+250815-14:58:49,1 nipype.interface INFO:
+	 sub: /output_dir/cmp-v3.1.0/sub-001/ses-1/anat/ROIv_Lausanne2018_scale1_FreeSurferColorLUT.txt -> /output_dir/cmp-v3.1.0/sub-001/ses-1/anat/sub-001_ses-1_atlas-L2018_res-scale1_FreeSurferColorLUT.txt
+250815-14:58:49,1 nipype.interface INFO:
+	 sub: /output_dir/cmp-v3.1.0/sub-001/ses-1/anat/ROIv_Lausanne2018_scale2_FreeSurferColorLUT.txt -> /output_dir/cmp-v3.1.0/sub-001/ses-1/anat/sub-001_ses-1_atlas-L2018_res-scale2_FreeSurferColorLUT.txt
+250815-14:58:49,1 nipype.interface INFO:
+	 sub: /output_dir/cmp-v3.1.0/sub-001/ses-1/anat/ROIv_Lausanne2018_scale3_FreeSurferColorLUT.txt -> /output_dir/cmp-v3.1.0/sub-001/ses-1/anat/sub-001_ses-1_atlas-L2018_res-scale3_FreeSurferColorLUT.txt
+250815-14:58:49,2 nipype.interface INFO:
+	 sub: /output_dir/cmp-v3.1.0/sub-001/ses-1/anat/ROIv_Lausanne2018_scale4_FreeSurferColorLUT.txt -> /output_dir/cmp-v3.1.0/sub-001/ses-1/anat/sub-001_ses-1_atlas-L2018_res-scale4_FreeSurferColorLUT.txt
+250815-14:58:49,2 nipype.interface INFO:
+	 sub: /output_dir/cmp-v3.1.0/sub-001/ses-1/anat/ROIv_Lausanne2018_scale5_FreeSurferColorLUT.txt -> /output_dir/cmp-v3.1.0/sub-001/ses-1/anat/sub-001_ses-1_atlas-L2018_res-scale5_FreeSurferColorLUT.txt
+250815-14:58:49,2 nipype.interface INFO:
+	 sub: /output_dir/cmp-v3.1.0/sub-001/ses-1/anat/ROIv_Lausanne2018_scale1.graphml -> /output_dir/cmp-v3.1.0/sub-001/ses-1/anat/sub-001_ses-1_atlas-L2018_res-scale1_dseg.graphml
+250815-14:58:49,3 nipype.interface INFO:
+	 sub: /output_dir/cmp-v3.1.0/sub-001/ses-1/anat/ROIv_Lausanne2018_scale2.graphml -> /output_dir/cmp-v3.1.0/sub-001/ses-1/anat/sub-001_ses-1_atlas-L2018_res-scale2_dseg.graphml
+250815-14:58:49,3 nipype.interface INFO:
+	 sub: /output_dir/cmp-v3.1.0/sub-001/ses-1/anat/ROIv_Lausanne2018_scale3.graphml -> /output_dir/cmp-v3.1.0/sub-001/ses-1/anat/sub-001_ses-1_atlas-L2018_res-scale3_dseg.graphml
+250815-14:58:49,3 nipype.interface INFO:
+	 sub: /output_dir/cmp-v3.1.0/sub-001/ses-1/anat/ROIv_Lausanne2018_scale4.graphml -> /output_dir/cmp-v3.1.0/sub-001/ses-1/anat/sub-001_ses-1_atlas-L2018_res-scale4_dseg.graphml
+250815-14:58:49,4 nipype.interface INFO:
+	 sub: /output_dir/cmp-v3.1.0/sub-001/ses-1/anat/ROIv_Lausanne2018_scale5.graphml -> /output_dir/cmp-v3.1.0/sub-001/ses-1/anat/sub-001_ses-1_atlas-L2018_res-scale5_dseg.graphml
+250815-14:58:49,4 nipype.interface INFO:
+	 sub: /output_dir/cmp-v3.1.0/sub-001/ses-1/anat/_createBIDSLabelIndexMappingFile0/ROIv_Lausanne2018_scale1.tsv -> /output_dir/cmp-v3.1.0/sub-001/ses-1/anat/sub-001_ses-1_atlas-L2018_res-scale1_dseg.tsv
+250815-14:58:49,4 nipype.interface INFO:
+	 sub: /output_dir/cmp-v3.1.0/sub-001/ses-1/anat/_createBIDSLabelIndexMappingFile1/ROIv_Lausanne2018_scale2.tsv -> /output_dir/cmp-v3.1.0/sub-001/ses-1/anat/sub-001_ses-1_atlas-L2018_res-scale2_dseg.tsv
+250815-14:58:49,4 nipype.interface INFO:
+	 sub: /output_dir/cmp-v3.1.0/sub-001/ses-1/anat/_createBIDSLabelIndexMappingFile2/ROIv_Lausanne2018_scale3.tsv -> /output_dir/cmp-v3.1.0/sub-001/ses-1/anat/sub-001_ses-1_atlas-L2018_res-scale3_dseg.tsv
+250815-14:58:49,5 nipype.interface INFO:
+	 sub: /output_dir/cmp-v3.1.0/sub-001/ses-1/anat/_createBIDSLabelIndexMappingFile3/ROIv_Lausanne2018_scale4.tsv -> /output_dir/cmp-v3.1.0/sub-001/ses-1/anat/sub-001_ses-1_atlas-L2018_res-scale4_dseg.tsv
+250815-14:58:49,6 nipype.interface INFO:
+	 sub: /output_dir/cmp-v3.1.0/sub-001/ses-1/anat/_createBIDSLabelIndexMappingFile4/ROIv_Lausanne2018_scale5.tsv -> /output_dir/cmp-v3.1.0/sub-001/ses-1/anat/sub-001_ses-1_atlas-L2018_res-scale5_dseg.tsv
+250815-14:58:49,6 nipype.interface INFO:
+	 sub: /output_dir/cmp-v3.1.0/sub-001/ses-1/anat/scale1_roi_stats.tsv -> /output_dir/cmp-v3.1.0/sub-001/ses-1/anat/sub-001_ses-1_atlas-L2018_res-scale1_stats.tsv
+250815-14:58:49,6 nipype.interface INFO:
+	 sub: /output_dir/cmp-v3.1.0/sub-001/ses-1/anat/scale2_roi_stats.tsv -> /output_dir/cmp-v3.1.0/sub-001/ses-1/anat/sub-001_ses-1_atlas-L2018_res-scale2_stats.tsv
+250815-14:58:49,7 nipype.interface INFO:
+	 sub: /output_dir/cmp-v3.1.0/sub-001/ses-1/anat/scale3_roi_stats.tsv -> /output_dir/cmp-v3.1.0/sub-001/ses-1/anat/sub-001_ses-1_atlas-L2018_res-scale3_stats.tsv
+250815-14:58:49,16 nipype.interface INFO:
+	 sub: /output_dir/cmp-v3.1.0/sub-001/ses-1/anat/scale4_roi_stats.tsv -> /output_dir/cmp-v3.1.0/sub-001/ses-1/anat/sub-001_ses-1_atlas-L2018_res-scale4_stats.tsv
+250815-14:58:49,16 nipype.interface INFO:
+	 sub: /output_dir/cmp-v3.1.0/sub-001/ses-1/anat/scale5_roi_stats.tsv -> /output_dir/cmp-v3.1.0/sub-001/ses-1/anat/sub-001_ses-1_atlas-L2018_res-scale5_stats.tsv
+250815-14:58:49,17 nipype.workflow INFO:
+	 [Node] Finished "anat_datasinker", elapsed time 0.023414s.
+250815-14:58:50,809 nipype.workflow INFO:
+	 [Job 9] Completed (anatomical_pipeline.anat_datasinker).
+250815-14:58:50,811 nipype.workflow INFO:
+	 [MultiProc] Running 0 tasks, and 0 jobs ready. Free memory (GB): 1360.44/1360.44, Free processors: 1/1.
+250815-14:58:52,823 nipype.interface INFO:
+	 **** Processing finished ****
+  .. INFO: Valid derivatives for anatomical pipeline

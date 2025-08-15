@@ -1,0 +1,248 @@
+index, name                                                   , type      , volume-mm3 
+1   , ctx-rh-lateralorbitofrontal_1                          , cortical  ,     2120.0 
+2   , ctx-rh-lateralorbitofrontal_2                          , cortical  ,     2478.0 
+3   , ctx-rh-lateralorbitofrontal_3                          , cortical  ,     2139.0 
+4   , ctx-rh-lateralorbitofrontal_4                          , cortical  ,     1310.0 
+5   , ctx-rh-parsorbitalis_1                                 , cortical  ,     3263.0 
+6   , ctx-rh-frontalpole_1                                   , cortical  ,     1242.0 
+7   , ctx-rh-medialorbitofrontal_1                           , cortical  ,     2684.0 
+8   , ctx-rh-medialorbitofrontal_2                           , cortical  ,     1482.0 
+9   , ctx-rh-medialorbitofrontal_3                           , cortical  ,     1053.0 
+10  , ctx-rh-parstriangularis_1                              , cortical  ,      828.0 
+11  , ctx-rh-parstriangularis_2                              , cortical  ,     3617.0 
+12  , ctx-rh-parsopercularis_1                               , cortical  ,     2054.0 
+13  , ctx-rh-parsopercularis_2                               , cortical  ,     2903.0 
+14  , ctx-rh-rostralmiddlefrontal_1                          , cortical  ,     4643.0 
+15  , ctx-rh-rostralmiddlefrontal_2                          , cortical  ,     2325.0 
+16  , ctx-rh-rostralmiddlefrontal_3                          , cortical  ,     4621.0 
+17  , ctx-rh-rostralmiddlefrontal_4                          , cortical  ,     2940.0 
+18  , ctx-rh-rostralmiddlefrontal_5                          , cortical  ,     2600.0 
+19  , ctx-rh-rostralmiddlefrontal_6                          , cortical  ,     3117.0 
+20  , ctx-rh-superiorfrontal_1                               , cortical  ,     2876.0 
+21  , ctx-rh-superiorfrontal_2                               , cortical  ,     3896.0 
+22  , ctx-rh-superiorfrontal_3                               , cortical  ,     4371.0 
+23  , ctx-rh-superiorfrontal_4                               , cortical  ,     3395.0 
+24  , ctx-rh-superiorfrontal_5                               , cortical  ,     4530.0 
+25  , ctx-rh-superiorfrontal_6                               , cortical  ,     2581.0 
+26  , ctx-rh-superiorfrontal_7                               , cortical  ,     2333.0 
+27  , ctx-rh-superiorfrontal_8                               , cortical  ,     2593.0 
+28  , ctx-rh-caudalmiddlefrontal_1                           , cortical  ,     1902.0 
+29  , ctx-rh-caudalmiddlefrontal_2                           , cortical  ,     1472.0 
+30  , ctx-rh-caudalmiddlefrontal_3                           , cortical  ,     4154.0 
+31  , ctx-rh-precentral_1                                    , cortical  ,     2043.0 
+32  , ctx-rh-precentral_2                                    , cortical  ,     2144.0 
+33  , ctx-rh-precentral_3                                    , cortical  ,     2148.0 
+34  , ctx-rh-precentral_4                                    , cortical  ,     2874.0 
+35  , ctx-rh-precentral_5                                    , cortical  ,     2887.0 
+36  , ctx-rh-precentral_6                                    , cortical  ,     3948.0 
+37  , ctx-rh-paracentral_1                                   , cortical  ,     1352.0 
+38  , ctx-rh-paracentral_2                                   , cortical  ,     2005.0 
+39  , ctx-rh-paracentral_3                                   , cortical  ,     1279.0 
+40  , ctx-rh-rostralanteriorcingulate_1                      , cortical  ,     2495.0 
+41  , ctx-rh-caudalanteriorcingulate_1                       , cortical  ,     2761.0 
+42  , ctx-rh-posteriorcingulate_1                            , cortical  ,     2016.0 
+43  , ctx-rh-posteriorcingulate_2                            , cortical  ,     1772.0 
+44  , ctx-rh-isthmuscingulate_1                              , cortical  ,     2969.0 
+45  , ctx-rh-postcentral_1                                   , cortical  ,     1959.0 
+46  , ctx-rh-postcentral_2                                   , cortical  ,     1460.0 
+47  , ctx-rh-postcentral_3                                   , cortical  ,     2093.0 
+48  , ctx-rh-postcentral_4                                   , cortical  ,     1104.0 
+49  , ctx-rh-postcentral_5                                   , cortical  ,     2622.0 
+50  , ctx-rh-supramarginal_1                                 , cortical  ,     1481.0 
+51  , ctx-rh-supramarginal_2                                 , cortical  ,     3333.0 
+52  , ctx-rh-supramarginal_3                                 , cortical  ,     2583.0 
+53  , ctx-rh-supramarginal_4                                 , cortical  ,     3194.0 
+54  , ctx-rh-superiorparietal_1                              , cortical  ,     2287.0 
+55  , ctx-rh-superiorparietal_2                              , cortical  ,     2012.0 
+56  , ctx-rh-superiorparietal_3                              , cortical  ,     3554.0 
+57  , ctx-rh-superiorparietal_4                              , cortical  ,     2911.0 
+58  , ctx-rh-superiorparietal_5                              , cortical  ,     2064.0 
+59  , ctx-rh-superiorparietal_6                              , cortical  ,     1518.0 
+60  , ctx-rh-superiorparietal_7                              , cortical  ,     2177.0 
+61  , ctx-rh-inferiorparietal_1                              , cortical  ,     2882.0 
+62  , ctx-rh-inferiorparietal_2                              , cortical  ,     3803.0 
+63  , ctx-rh-inferiorparietal_3                              , cortical  ,     2553.0 
+64  , ctx-rh-inferiorparietal_4                              , cortical  ,     1982.0 
+65  , ctx-rh-inferiorparietal_5                              , cortical  ,     3623.0 
+66  , ctx-rh-inferiorparietal_6                              , cortical  ,     2948.0 
+67  , ctx-rh-precuneus_1                                     , cortical  ,     1437.0 
+68  , ctx-rh-precuneus_2                                     , cortical  ,     1802.0 
+69  , ctx-rh-precuneus_3                                     , cortical  ,     2353.0 
+70  , ctx-rh-precuneus_4                                     , cortical  ,     3455.0 
+71  , ctx-rh-precuneus_5                                     , cortical  ,     3134.0 
+72  , ctx-rh-cuneus_1                                        , cortical  ,     1420.0 
+73  , ctx-rh-cuneus_2                                        , cortical  ,     1736.0 
+74  , ctx-rh-pericalcarine_1                                 , cortical  ,     1413.0 
+75  , ctx-rh-pericalcarine_2                                 , cortical  ,     1096.0 
+76  , ctx-rh-lateraloccipital_1                              , cortical  ,     1774.0 
+77  , ctx-rh-lateraloccipital_2                              , cortical  ,     2883.0 
+78  , ctx-rh-lateraloccipital_3                              , cortical  ,     2493.0 
+79  , ctx-rh-lateraloccipital_4                              , cortical  ,     4240.0 
+80  , ctx-rh-lateraloccipital_5                              , cortical  ,     3832.0 
+81  , ctx-rh-lingual_1                                       , cortical  ,     2614.0 
+82  , ctx-rh-lingual_2                                       , cortical  ,     1638.0 
+83  , ctx-rh-lingual_3                                       , cortical  ,     2786.0 
+84  , ctx-rh-fusiform_1                                      , cortical  ,     2258.0 
+85  , ctx-rh-fusiform_2                                      , cortical  ,     3564.0 
+86  , ctx-rh-fusiform_3                                      , cortical  ,     2782.0 
+87  , ctx-rh-fusiform_4                                      , cortical  ,     3919.0 
+88  , ctx-rh-parahippocampal_1                               , cortical  ,     1955.0 
+89  , ctx-rh-entorhinal_1                                    , cortical  ,     1729.0 
+90  , ctx-rh-temporalpole_1                                  , cortical  ,     2783.0 
+91  , ctx-rh-inferiortemporal_1                              , cortical  ,     2604.0 
+92  , ctx-rh-inferiortemporal_2                              , cortical  ,     2608.0 
+93  , ctx-rh-inferiortemporal_3                              , cortical  ,     2513.0 
+94  , ctx-rh-inferiortemporal_4                              , cortical  ,     4183.0 
+95  , ctx-rh-middletemporal_1                                , cortical  ,     3376.0 
+96  , ctx-rh-middletemporal_2                                , cortical  ,     2126.0 
+97  , ctx-rh-middletemporal_3                                , cortical  ,     2711.0 
+98  , ctx-rh-middletemporal_4                                , cortical  ,     4290.0 
+99  , ctx-rh-bankssts_1                                      , cortical  ,     2711.0 
+100 , ctx-rh-superiortemporal_1                              , cortical  ,     2357.0 
+101 , ctx-rh-superiortemporal_2                              , cortical  ,     2150.0 
+102 , ctx-rh-superiortemporal_3                              , cortical  ,     2692.0 
+103 , ctx-rh-superiortemporal_4                              , cortical  ,     1160.0 
+104 , ctx-rh-superiortemporal_5                              , cortical  ,     4470.0 
+105 , ctx-rh-transversetemporal_1                            , cortical  ,     1019.0 
+106 , ctx-rh-insula_1                                        , cortical  ,     1492.0 
+107 , ctx-rh-insula_2                                        , cortical  ,     2778.0 
+108 , ctx-rh-insula_3                                        , cortical  ,     2985.0 
+109 , Right-Pulvinar                                         , subcortical,        0.0 
+110 , Right-Anterior                                         , subcortical,        0.0 
+111 , Right-Medio_Dorsal                                     , subcortical,        0.0 
+112 , Right-Ventral_Latero_Dorsal                            , subcortical,        0.0 
+113 , Right-Central_Lateral-Lateral_Posterior-Medial_Pulvinar, subcortical,        0.0 
+114 , Right-Ventral_Anterior                                 , subcortical,        0.0 
+115 , Right-Ventral_Latero_Ventral                           , subcortical,        0.0 
+116 , Right-Thalamus_Proper                                  , subcortical,     9506.0 
+117 , Right-Caudate                                          , subcortical,     4687.0 
+118 , Right-Putamen                                          , subcortical,     6227.0 
+119 , Right-Pallidum                                         , subcortical,     2531.0 
+120 , Right-Accumbens_area                                   , subcortical,      677.0 
+121 , Right-Hippocampus                                      , subcortical,     5423.0 
+122 , Right-Amygdala                                         , subcortical,     2018.0 
+123 , Right-VentralDC                                        , subcortical,     5614.0 
+124 , ctx-lh-lateralorbitofrontal_1                          , cortical  ,     2000.0 
+125 , ctx-lh-lateralorbitofrontal_2                          , cortical  ,     2752.0 
+126 , ctx-lh-lateralorbitofrontal_3                          , cortical  ,     2151.0 
+127 , ctx-lh-lateralorbitofrontal_4                          , cortical  ,     1648.0 
+128 , ctx-lh-parsorbitalis_1                                 , cortical  ,     2794.0 
+129 , ctx-lh-frontalpole_1                                   , cortical  ,     1074.0 
+130 , ctx-lh-medialorbitofrontal_1                           , cortical  ,     2599.0 
+131 , ctx-lh-medialorbitofrontal_2                           , cortical  ,     1431.0 
+132 , ctx-lh-medialorbitofrontal_3                           , cortical  ,      904.0 
+133 , ctx-lh-parstriangularis_1                              , cortical  ,      934.0 
+134 , ctx-lh-parstriangularis_2                              , cortical  ,     3560.0 
+135 , ctx-lh-parsopercularis_1                               , cortical  ,     3124.0 
+136 , ctx-lh-parsopercularis_2                               , cortical  ,     2803.0 
+137 , ctx-lh-rostralmiddlefrontal_1                          , cortical  ,     3640.0 
+138 , ctx-lh-rostralmiddlefrontal_2                          , cortical  ,     3081.0 
+139 , ctx-lh-rostralmiddlefrontal_3                          , cortical  ,     4723.0 
+140 , ctx-lh-rostralmiddlefrontal_4                          , cortical  ,     2368.0 
+141 , ctx-lh-rostralmiddlefrontal_5                          , cortical  ,     1757.0 
+142 , ctx-lh-rostralmiddlefrontal_6                          , cortical  ,     3580.0 
+143 , ctx-lh-superiorfrontal_1                               , cortical  ,     2741.0 
+144 , ctx-lh-superiorfrontal_2                               , cortical  ,     4172.0 
+145 , ctx-lh-superiorfrontal_3                               , cortical  ,     3937.0 
+146 , ctx-lh-superiorfrontal_4                               , cortical  ,     2453.0 
+147 , ctx-lh-superiorfrontal_5                               , cortical  ,     4406.0 
+148 , ctx-lh-superiorfrontal_6                               , cortical  ,     3290.0 
+149 , ctx-lh-superiorfrontal_7                               , cortical  ,     2965.0 
+150 , ctx-lh-superiorfrontal_8                               , cortical  ,     2411.0 
+151 , ctx-lh-caudalmiddlefrontal_1                           , cortical  ,     2196.0 
+152 , ctx-lh-caudalmiddlefrontal_2                           , cortical  ,     1575.0 
+153 , ctx-lh-caudalmiddlefrontal_3                           , cortical  ,     4637.0 
+154 , ctx-lh-precentral_1                                    , cortical  ,     2236.0 
+155 , ctx-lh-precentral_2                                    , cortical  ,     2245.0 
+156 , ctx-lh-precentral_3                                    , cortical  ,     2380.0 
+157 , ctx-lh-precentral_4                                    , cortical  ,     3458.0 
+158 , ctx-lh-precentral_5                                    , cortical  ,     2504.0 
+159 , ctx-lh-precentral_6                                    , cortical  ,     3892.0 
+160 , ctx-lh-paracentral_1                                   , cortical  ,     1501.0 
+161 , ctx-lh-paracentral_2                                   , cortical  ,     1490.0 
+162 , ctx-lh-paracentral_3                                   , cortical  ,     1214.0 
+163 , ctx-lh-rostralanteriorcingulate_1                      , cortical  ,     3039.0 
+164 , ctx-lh-caudalanteriorcingulate_1                       , cortical  ,     2071.0 
+165 , ctx-lh-posteriorcingulate_1                            , cortical  ,     1724.0 
+166 , ctx-lh-posteriorcingulate_2                            , cortical  ,     1916.0 
+167 , ctx-lh-isthmuscingulate_1                              , cortical  ,     2795.0 
+168 , ctx-lh-postcentral_1                                   , cortical  ,     1798.0 
+169 , ctx-lh-postcentral_2                                   , cortical  ,     1943.0 
+170 , ctx-lh-postcentral_3                                   , cortical  ,     2424.0 
+171 , ctx-lh-postcentral_4                                   , cortical  ,     1290.0 
+172 , ctx-lh-postcentral_5                                   , cortical  ,     3793.0 
+173 , ctx-lh-supramarginal_1                                 , cortical  ,     1978.0 
+174 , ctx-lh-supramarginal_2                                 , cortical  ,     4023.0 
+175 , ctx-lh-supramarginal_3                                 , cortical  ,     4615.0 
+176 , ctx-lh-supramarginal_4                                 , cortical  ,     2930.0 
+177 , ctx-lh-superiorparietal_1                              , cortical  ,     2008.0 
+178 , ctx-lh-superiorparietal_2                              , cortical  ,     2135.0 
+179 , ctx-lh-superiorparietal_3                              , cortical  ,     2956.0 
+180 , ctx-lh-superiorparietal_4                              , cortical  ,     1819.0 
+181 , ctx-lh-superiorparietal_5                              , cortical  ,     1879.0 
+182 , ctx-lh-superiorparietal_6                              , cortical  ,     1162.0 
+183 , ctx-lh-superiorparietal_7                              , cortical  ,     2204.0 
+184 , ctx-lh-inferiorparietal_1                              , cortical  ,     1927.0 
+185 , ctx-lh-inferiorparietal_2                              , cortical  ,     3128.0 
+186 , ctx-lh-inferiorparietal_3                              , cortical  ,     1815.0 
+187 , ctx-lh-inferiorparietal_4                              , cortical  ,     2313.0 
+188 , ctx-lh-inferiorparietal_5                              , cortical  ,     2009.0 
+189 , ctx-lh-inferiorparietal_6                              , cortical  ,     2553.0 
+190 , ctx-lh-precuneus_1                                     , cortical  ,     1157.0 
+191 , ctx-lh-precuneus_2                                     , cortical  ,     1909.0 
+192 , ctx-lh-precuneus_3                                     , cortical  ,     1823.0 
+193 , ctx-lh-precuneus_4                                     , cortical  ,     3741.0 
+194 , ctx-lh-precuneus_5                                     , cortical  ,     2956.0 
+195 , ctx-lh-cuneus_1                                        , cortical  ,     1166.0 
+196 , ctx-lh-cuneus_2                                        , cortical  ,     1678.0 
+197 , ctx-lh-pericalcarine_1                                 , cortical  ,     1576.0 
+198 , ctx-lh-pericalcarine_2                                 , cortical  ,     1322.0 
+199 , ctx-lh-lateraloccipital_1                              , cortical  ,     2321.0 
+200 , ctx-lh-lateraloccipital_2                              , cortical  ,     2668.0 
+201 , ctx-lh-lateraloccipital_3                              , cortical  ,     1969.0 
+202 , ctx-lh-lateraloccipital_4                              , cortical  ,     3400.0 
+203 , ctx-lh-lateraloccipital_5                              , cortical  ,     4673.0 
+204 , ctx-lh-lingual_1                                       , cortical  ,     1976.0 
+205 , ctx-lh-lingual_2                                       , cortical  ,     1873.0 
+206 , ctx-lh-lingual_3                                       , cortical  ,     2861.0 
+207 , ctx-lh-fusiform_1                                      , cortical  ,     1845.0 
+208 , ctx-lh-fusiform_2                                      , cortical  ,     3014.0 
+209 , ctx-lh-fusiform_3                                      , cortical  ,     2163.0 
+210 , ctx-lh-fusiform_4                                      , cortical  ,     3347.0 
+211 , ctx-lh-parahippocampal_1                               , cortical  ,     1820.0 
+212 , ctx-lh-entorhinal_1                                    , cortical  ,     2094.0 
+213 , ctx-lh-temporalpole_1                                  , cortical  ,     2682.0 
+214 , ctx-lh-inferiortemporal_1                              , cortical  ,     2987.0 
+215 , ctx-lh-inferiortemporal_2                              , cortical  ,     3008.0 
+216 , ctx-lh-inferiortemporal_3                              , cortical  ,     3678.0 
+217 , ctx-lh-inferiortemporal_4                              , cortical  ,     3704.0 
+218 , ctx-lh-middletemporal_1                                , cortical  ,     2678.0 
+219 , ctx-lh-middletemporal_2                                , cortical  ,     2097.0 
+220 , ctx-lh-middletemporal_3                                , cortical  ,     2545.0 
+221 , ctx-lh-middletemporal_4                                , cortical  ,     5661.0 
+222 , ctx-lh-bankssts_1                                      , cortical  ,     2685.0 
+223 , ctx-lh-superiortemporal_1                              , cortical  ,     3371.0 
+224 , ctx-lh-superiortemporal_2                              , cortical  ,     1714.0 
+225 , ctx-lh-superiortemporal_3                              , cortical  ,     2496.0 
+226 , ctx-lh-superiortemporal_4                              , cortical  ,     1363.0 
+227 , ctx-lh-superiortemporal_5                              , cortical  ,     4720.0 
+228 , ctx-lh-transversetemporal_1                            , cortical  ,     1269.0 
+229 , ctx-lh-insula_1                                        , cortical  ,     1671.0 
+230 , ctx-lh-insula_2                                        , cortical  ,     2712.0 
+231 , ctx-lh-insula_3                                        , cortical  ,     3035.0 
+232 , Left-Pulvinar                                          , subcortical,        0.0 
+233 , Left-Anterior                                          , subcortical,        0.0 
+234 , Left-Medio_Dorsal                                      , subcortical,        0.0 
+235 , Left-Ventral_Latero_Dorsal                             , subcortical,        0.0 
+236 , Left-Central_Lateral-Lateral_Posterior-Medial_Pulvinar , subcortical,        0.0 
+237 , Left-Ventral_Anterior                                  , subcortical,        0.0 
+238 , Left-Ventral_Latero_Ventral                            , subcortical,        0.0 
+239 , Left-Thalamus_Proper                                   , subcortical,    10034.0 
+240 , Left-Caudate                                           , subcortical,     4499.0 
+241 , Left-Putamen                                           , subcortical,     6187.0 
+242 , Left-Pallidum                                          , subcortical,     2581.0 
+243 , Left-Accumbens_area                                    , subcortical,      553.0 
+244 , Left-Hippocampus                                       , subcortical,     5427.0 
+245 , Left-Amygdala                                          , subcortical,     1870.0 
+246 , Left-VentralDC                                         , subcortical,     5553.0 
+247 , brainstem                                              , subcortical,    24749.0 

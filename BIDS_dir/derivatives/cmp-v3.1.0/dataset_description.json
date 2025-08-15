@@ -1,0 +1,17 @@
+{
+    "Name": "CMP3 Outputs",
+    "BIDSVersion": "1.4.0",
+    "DatasetType": "derivatives",
+    "GeneratedBy": [
+        {
+            "Name": "cmp-v3.1.0",
+            "Version": "v3.1.0",
+            "Container": {
+                "Type": "docker",
+                "Tag": "sebastientourbier/connectomemapper-bidsapp:v3.1.0"
+            },
+            "CodeURL": "https://github.com/connectomicslab/connectomemapper3/tree/v3.1.0"
+        }
+    ],
+    "License": "TODO: To be updated (See https://creativecommons.org/about/cclicenses/)"
+}
