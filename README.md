@@ -116,7 +116,7 @@ brain = nib.load(working_path + 'brain_templates/sub-001_ses-1_brain.nii.gz') #T
 aparcaseg = nib.load(working_path + 'brain_templates/sub-001_ses-1_atlas-L2018_res-scale1_dseg.nii.gz') # Whole-brain parcellation
 ```
 
-Additionally, you will have to bring (register) the Yeo7 atlas into your native space using (ANTS)[https://github.com/ANTsX/ANTs] or a similar tool and then map **yeo7** variable to the correct nifti file.
+Additionally, you will have to bring (register) the Yeo7 atlas into your native space using [ANTS](https://github.com/ANTsX/ANTs) or a similar tool and then map **yeo7** variable to the correct nifti file.
 ``` python
 yeo7 = nib.load(working_path + 'brain_templates/Yeo7_Network_sub-001.nii.gz')
 ```
