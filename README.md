@@ -58,7 +58,7 @@ jupyter lab tutorial.ipynb
    - Violin plots comparing quantitative metrics between clinical groups
    - Regression lines between quantitative metrics and clinical scores of depression severity
    - Cluster medoid maps in anatomical brain space
-   - Mapping of each cluster onto a canonically defined resting state brain network as a radar plot
+   - Radar plots with mapping of each cluster onto a canonically defined resting state brain network as a radar plot
    - Heatmaps of transition probabilities between pairs of states.
 6. Outputs quantitative metrics such as:
    - Dwell times, fractional occupancy, transition probabilities, persistence probabilities
